@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Lamosa.SCPP.Common.Entities.ClassImpl" elementFormDefault="qualified" targetNamespace="Lamosa.SCPP.Common.Entities.ClassImpl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ConfigAlertaServiceManager.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="Destinatario">
+    <xs:sequence>
+      <xs:element name="Clave" nillable="true" type="xs:string" />
+      <xs:element name="Codigo" type="xs:int" />
+      <xs:element name="Correo" nillable="true" type="xs:string" />
+      <xs:element name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Destinatario" nillable="true" type="tns:Destinatario" />
+  <xs:complexType name="ConfigAlerta">
+    <xs:sequence>
+      <xs:element name="Alerta" nillable="true" type="xs:anyType" />
+      <xs:element name="Clave" nillable="true" type="xs:string" />
+      <xs:element name="ClaveCalidad" nillable="true" type="xs:string" />
+      <xs:element name="CodColor" type="xs:int" />
+      <xs:element name="CodDefecto" type="xs:int" />
+      <xs:element name="CodLimiteMaximo" type="xs:int" />
+      <xs:element name="CodLimiteMinimo" type="xs:int" />
+      <xs:element name="CodOperador" type="xs:int" />
+      <xs:element name="CodTipoArticulo" type="xs:int" />
+      <xs:element name="CodTurno" type="xs:int" />
+      <xs:element name="CodZonaDefecto" type="xs:int" />
+      <xs:element name="Codigo" type="xs:int" />
+      <xs:element name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element name="Maquina" type="xs:int" />
+      <xs:element name="Modelo" type="xs:int" />
+      <xs:element name="Planta" nillable="true" type="xs:anyType" />
+      <xs:element name="Proceso" nillable="true" type="xs:anyType" />
+      <xs:element name="TipoDefecto" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigAlerta" nillable="true" type="tns:ConfigAlerta" />
+  <xs:complexType name="TipoAlerta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoAlerta" nillable="true" type="tns:TipoAlerta" />
+  <xs:complexType name="TipoDefecto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoDefecto" nillable="true" type="tns:TipoDefecto" />
+  <xs:complexType name="Alerta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Asunto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Destinatarios" nillable="true" type="q1:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="Frecuencia" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoAlerta" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Alerta" nillable="true" type="tns:Alerta" />
+  <xs:complexType name="Proceso">
+    <xs:sequence>
+      <xs:element name="Clave" nillable="true" type="xs:string" />
+      <xs:element name="Codigo" type="xs:int" />
+      <xs:element name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element name="TipoProceso" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Proceso" nillable="true" type="tns:Proceso" />
+  <xs:complexType name="TipoProceso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoProceso" nillable="true" type="tns:TipoProceso" />
+  <xs:complexType name="Planta">
+    <xs:sequence>
+      <xs:element name="Clave" nillable="true" type="xs:string" />
+      <xs:element name="Codigo" type="xs:int" />
+      <xs:element name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Planta" nillable="true" type="tns:Planta" />
+  <xs:complexType name="Frecuencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Frecuencia" nillable="true" type="tns:Frecuencia" />
+</xs:schema>

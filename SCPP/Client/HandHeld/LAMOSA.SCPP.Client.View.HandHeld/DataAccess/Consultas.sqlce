@@ -1,0 +1,314 @@
+--------------------------------------------------------------------
+-- Login
+
+-- ObtenerUsuario
+select	u.cod_usuario as CodUsuario,
+		u.login as Login,
+		u.password as Password,
+		u.cod_empleado as CodEmpleado,
+		(e.nombre + ' ' + e.ap_paterno + ' ' + e.ap_materno) as NomEmpleado,
+		u.cod_rol as CodRol,
+		r.des_rol as DesRol,
+		e.cod_puesto as CodPuesto,
+		p.des_puesto as DesPuesto,
+		u.bloqueado as Bloqueado,
+		u.fecha_vig_password as FechaVigPassword
+from	usuario u,
+		empleado e,
+		rol r,
+		puesto p
+where		u.cod_empleado = e.cod_empleado
+		and	u.cod_rol = r.cod_rol
+		and	e.cod_puesto = p.cod_puesto
+		and	u.fecha_baja is null
+		and e.fecha_baja is null
+		and r.fecha_baja is null
+		and p.fecha_baja is null
+		and	u.login = @Login;
+
+-- ObtenerDiasAvisoVigPass
+select	c.valor_configuracion as DiasAvisoVigPass
+from	configuracion c
+where		c.cod_configuracion = 3;
+
+-- ReiniciarContadorIntentos
+update	usuario
+set		num_intentos = 0
+where		cod_usuario = 1;
+
+-- IncrementarContadorIntentos
+update	usuario
+set		num_intentos = num_intentos + 1
+where		cod_usuario = 1;
+
+-- ObtenerNumIntentosConfigurados
+select	c.valor_configuracion as NumIntentosConfig
+from	configuracion c
+where		c.cod_configuracion = 1;
+
+-- ObtenerNumIntentosUsuario
+select	u.num_intentos as NumIntentosUsuario
+from	usuario u
+where		u.cod_usuario = 1;
+
+-- BloquearUsuario
+update	usuario
+set		num_intentos	= 0,
+		bloqueado		= 1
+where		cod_usuario = 1;
+
+--------------------------------------------------------------------
+-- Seleccion Planta
+
+-- ObtenerPlantasRol
+select	rp.cod_planta as CodPlanta,
+		p.des_planta as DesPlanta
+from	rol_planta rp,
+		planta p
+where		rp.cod_planta = p.cod_planta
+		and	rp.cod_rol = @CodRol
+order by	p.des_planta asc;
+
+--------------------------------------------------------------------
+-- Configuracion Inicial
+
+-- ObtenerTurnos
+select	t.cod_turno as CodTurno,
+		t.des_turno as DesTurno
+from	turno t
+where		t.fecha_baja is null
+order by	t.des_turno asc;
+
+-- ObtenerProcesos
+select	p.cod_proceso as CodProceso,
+		p.des_proceso as DesProceso
+from	proceso p
+where		p.fecha_baja is null
+order by	p.cod_proceso asc;
+
+-- ObtenerPantallasProceso
+select	pp.cod_pantalla as CodPantalla,
+		p.des_pantalla as DesPantalla
+from	proceso_pantalla pp,
+		SCPP_pantalla p
+where		pp.cod_pantalla = p.cod_pantalla
+		and	pp.cod_proceso = @CodProceso
+		and p.fecha_baja is null
+order by	p.cod_pantalla asc;
+
+-- ObtenerSigCodConfigHandHeld
+select	((case when max(ch.cod_config_handheld) is null then 0 else max(ch.cod_config_handheld) end) + 1) as CodConfigHandHeld
+from	config_handheld ch;
+
+-- InsertarConfigHandHeld
+insert into config_handheld
+(cod_config_handheld, cod_usuario, cod_operador, cod_supervisor, fecha, cod_turno, cod_planta, cod_proceso)
+values (@CodConfigHandHeld, @CodUsuario, @CodOperador, @CodSupervisor, @Fecha , @CodTurno, @CodPlanta, @CodProceso);
+
+--------------------------------------------------------------------
+-- Captura Inicial
+
+-- ObtenerClaveEmpleadoMFG
+select	e.clave_empleado_MFG as ClaveEmpleadoMFG
+from	empleado e
+where		e.cod_empleado = @CodEmpleado
+		and e.fecha_baja is null;
+
+-- ValidarEmpleadoMFG
+select	e.cod_empleado as CodEmpleado
+from	empleado e
+where	e.clave_empleado_MFG = @ClaveEmpleadoMFG
+		and e.fecha_baja is null;
+
+-- ObtenerCentrosTrabajo
+select	ct.cod_centro_trabajo as CodCentroTrabajo,
+		ct.des_centro_trabajo as DesCentroTrabajo
+from	centro_trabajo ct
+where		ct.cod_planta = @CodPlanta
+		and	ct.cod_proceso = @CodProceso
+		and	ct.fecha_baja is null
+order by	ct.des_centro_trabajo asc;
+
+-- ObtenerColores
+select	c.cod_color as CodColor,
+		c.clave_color as ClaveColor,
+		(c.clave_color + ' - ' + c.des_color) as DesColor
+from	color c
+where		c.fecha_baja is null
+order by	c.clave_color asc;
+
+-- ObtenerMaquinas
+select	cb.cod_config_banco as CodConfigBanco,
+		m.cod_maquina as CodMaquina,
+		m.clave_maquina as ClaveMaquina,
+		m.clave_maquina + ' - ' + m.des_maquina as DesMaquina,
+		tm.cod_tipo_maquina as CodTipoMaquina,
+		tm.des_tipo_maquina as DesTipoMaquina
+from	centro_trabajo ct,
+		area a,
+		maquina m,
+		config_banco cb,
+		tipo_maquina tm
+where		ct.cod_centro_trabajo = a.cod_centro_trabajo
+		and	a.cod_area = m.cod_area
+		and	m.cod_maquina = cb.cod_maquina
+		and m.cod_tipo_maquina = tm.cod_tipo_maquina
+		and	ct.cod_planta = @CodPlanta
+		and	ct.cod_proceso = @CodProceso
+		and	ct.cod_centro_trabajo = @CodCentroTrabajo
+		and ct.fecha_baja is null
+		and a.fecha_baja is null
+		and m.fecha_baja is null
+		and tm.fecha_baja is null
+		and cb.cod_usuario_autoriza is not null
+		and cb.fecha_inicio <= getdate()
+		and cb.fecha_fin is null
+order by	m.des_maquina asc;
+
+-- ObtenerNumPosicionesBanco
+select	count(*) as NumPosBanco
+from	config_banco_molde_det cbmd,
+		config_banco_molde cbm
+where		cbmd.cod_consecutivo = cbm.cod_consecutivo
+		and	cbmd.cod_config_banco = @CodConfigBanco;
+
+-- ActualizarConfigHandHeld
+update	config_handheld
+set		cod_supervisor = @CodSupervisor,
+		cod_config_banco = @CodConfigBanco
+where		cod_config_handheld = @CodConfigHandHeld;
+
+--------------------------------------------------------------------
+-- Captura Vaciado
+
+-- ObtenerPruebas
+select	p.cod_prueba as CodPrueba,
+		p.des_prueba as DesPrueba
+from	prueba p
+where		p.cod_planta = @CodPlanta
+		and	p.cod_proceso = @CodProceso
+		and p.fecha_baja is null
+order by	p.des_prueba asc;
+
+-- ObtenerPosicionesBanco
+select	cbmd.cod_consecutivo as CodConsecutivo,
+		cbm.posicion as Posicion,
+		cbmd.cod_molde as CodMolde
+from	config_banco_molde_det cbmd,
+		config_banco_molde cbm
+where		cbmd.cod_consecutivo = cbm.cod_consecutivo
+		and	cbmd.cod_config_banco = @CodConfigBanco
+order by	cbm.posicion asc;
+
+-- ObtenerArticulosMolde
+select	a.cod_articulo as CodArticulo,
+		a.clave_articulo as ClaveArticulo,
+		a.clave_articulo + ' - ' + a.des_articulo as DesArticulo,
+		ta.cod_tipo_articulo as CodTipoArticulo,
+		ta.clave_tipo_articulo as ClaveTipoArticulo,
+		ta.clave_tipo_articulo + ' - ' + ta.des_tipo_articulo as DesTipoArticulo
+from	articulo a,
+		tipo_articulo ta
+where		a.cod_tipo_articulo = ta.cod_tipo_articulo
+		and	a.cod_molde = @CodMolde
+		and	a.fecha_baja is null
+		and	ta.fecha_baja is null;
+
+-- ObtenerSigCodPieza
+select	((case when max(p.cod_pieza) is null then 0 else max(p.cod_pieza) end) + 1) as CodPieza
+from	pieza p;
+
+-- InsertarPieza
+insert into pieza
+(cod_planta, cod_pieza, cod_barras, cod_config_banco, cod_consecutivo, posicion, cod_articulo)
+values (@CodPlanta, @CodPieza, @CodBarras, @CodConfigBanco, @CodConsecutivo, @Posicion, @CodArticulo);
+
+--------------------------------------------------------------------
+-- Armado de Carro para Secador
+
+-- ObtenerPiezasCarro
+select	cp.cod_pieza as CodPieza
+from	carro_pieza cp
+where		cp.cod_planta = @CodPlanta
+		and	cp.cod_proceso = @CodProceso
+		and	cp.cod_carro = @CodCarro;
+
+-- ObtenerCodPieza
+select	cod_pieza as CodPieza
+from	pieza p
+where		p.cod_planta = @CodPlanta
+		and	p.cod_barras = @CodBarras;
+
+-- ExistePiezaEnCarro
+select	cp.cod_carro as CodCarro
+from	carro_pieza cp
+where		cp.cod_planta = @CodPlanta
+		and	cp.cod_proceso = @CodProceso
+		and	cp.cod_pieza = @CodPieza;
+
+-- InsertarCarroPieza
+insert into carro_pieza
+(cod_planta, cod_proceso, cod_carro, cod_pieza)
+values (@CodPlanta, @CodProceso, @CodCarro, @CodPieza);
+
+-- EliminarCarro
+delete
+from	carro_pieza
+where		cod_planta = @CodPlanta
+		and	cod_proceso = @CodProceso
+		and	cod_carro = @CodCarro;
+
+--------------------------------------------------------------------
+-- Entrada de Carro al Secador.
+
+-- ObtenerMaquinas
+select	cb.cod_config_banco as CodConfigBanco,
+		m.cod_maquina as CodMaquina,
+		m.clave_maquina as ClaveMaquina,
+		m.clave_maquina + ' - ' + m.des_maquina as DesMaquina,
+		tm.cod_tipo_maquina as CodTipoMaquina,
+		tm.des_tipo_maquina as DesTipoMaquina
+from	centro_trabajo ct,
+		area a,
+		maquina m,
+		config_banco cb,
+		tipo_maquina tm
+where		ct.cod_centro_trabajo = a.cod_centro_trabajo
+		and	a.cod_area = m.cod_area
+		and	m.cod_maquina = cb.cod_maquina
+		and m.cod_tipo_maquina = tm.cod_tipo_maquina
+		and	ct.cod_planta = @CodPlanta
+		and	ct.cod_proceso = @CodProceso
+		and	ct.cod_centro_trabajo = @CodCentroTrabajo
+		and ct.fecha_baja is null
+		and a.fecha_baja is null
+		and m.fecha_baja is null
+		and tm.fecha_baja is null
+		and cb.cod_usuario_autoriza is not null
+		and cb.fecha_inicio <= getdate()
+		and cb.fecha_fin is null
+order by	m.des_maquina asc;
+
+-- ObtenerSecadores.
+select	m.cod_maquina as CodMaquina,
+		m.des_maquina as DesMaquina
+from	centro_trabajo ct,
+		area a,
+		maquina m,
+		config_banco cb
+where		ct.cod_centro_trabajo = a.cod_centro_trabajo
+		and	a.cod_area = m.cod_area
+		and	m.cod_maquina = cb.cod_maquina
+		and	ct.cod_planta = 20
+		and	ct.cod_proceso = 2
+		and ct.fecha_baja is null
+		and a.fecha_baja is null
+		and	m.cod_tipo_maquina = 2
+		and m.fecha_baja is null
+		and cb.cod_usuario_autoriza is not null
+		and cb.fecha_inicio <= getdate()
+		and cb.fecha_fin is null
+order by	m.des_maquina asc;
+
+--------------------------------------------------------------------
+

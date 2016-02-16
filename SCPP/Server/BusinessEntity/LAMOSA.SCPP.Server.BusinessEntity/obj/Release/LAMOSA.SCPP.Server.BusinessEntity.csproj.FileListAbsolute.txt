@@ -1,0 +1,7 @@
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessEntity\LAMOSA.SCPP.Server.BusinessEntity\bin\Release\LAMOSA.SCPP.Server.BusinessEntity.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessEntity\LAMOSA.SCPP.Server.BusinessEntity\bin\Release\LAMOSA.SCPP.Server.BusinessEntity.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessEntity\LAMOSA.SCPP.Server.BusinessEntity\bin\Release\Common.SolutionEntityFramework.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessEntity\LAMOSA.SCPP.Server.BusinessEntity\bin\Release\Common.SolutionEntityFramework.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessEntity\LAMOSA.SCPP.Server.BusinessEntity\obj\Release\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessEntity\LAMOSA.SCPP.Server.BusinessEntity\obj\Release\LAMOSA.SCPP.Server.BusinessEntity.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessEntity\LAMOSA.SCPP.Server.BusinessEntity\obj\Release\LAMOSA.SCPP.Server.BusinessEntity.pdb

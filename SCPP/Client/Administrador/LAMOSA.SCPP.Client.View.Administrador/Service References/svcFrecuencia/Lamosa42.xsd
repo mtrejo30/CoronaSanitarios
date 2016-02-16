@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Lamosa.SCPP.Common.Entities.ClassImpl" elementFormDefault="qualified" targetNamespace="Lamosa.SCPP.Common.Entities.ClassImpl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Frecuencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Frecuencia" nillable="true" type="tns:Frecuencia" />
+</xs:schema>

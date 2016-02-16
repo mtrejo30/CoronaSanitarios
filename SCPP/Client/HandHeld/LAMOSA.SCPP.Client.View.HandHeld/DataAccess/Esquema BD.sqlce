@@ -1,0 +1,525 @@
+-----------------------------------------------------------------------------------
+drop table [proceso_pantalla];
+drop table [SCPP_pantalla];
+drop table [secador_transaccion];
+drop table [pieza_transaccion];
+drop table [config_handheld];
+drop table [turno];
+drop table [prueba];
+drop table [carro_pieza];
+drop table [pieza];
+drop table [calidad];
+drop table [color];
+drop table [articulo];
+drop table [grupo_articulo];
+drop table [tipo_articulo];
+drop table [config_banco_molde];
+drop table [config_banco_molde_det];
+drop table [molde];
+drop table [config_banco];
+drop table [rol_planta];
+drop table [usuario];
+drop table [rol];
+drop table [empleado];
+drop table [puesto];
+drop table [maquina];
+drop table [tipo_maquina];
+drop table [area];
+drop table [centro_trabajo];
+drop table [proceso];
+drop table [planta];
+drop table [almacen];
+drop table [configuracion];
+
+--------------------------------------------------------------------
+
+-- configuracion.
+create table [configuracion]
+(
+	cod_configuracion		int				not null,
+	des_configuracion		nvarchar(50)	not null,
+	valor_configuracion		int				not null default 0
+);
+alter table [configuracion]
+add constraint pk_configuracion primary key (cod_configuracion);
+
+-- almacen.
+create table [almacen]
+(
+	cod_almacen			int				not null,
+	des_almacen			nvarchar(100)	not null,
+	fecha_registro		datetime		not null,
+	fecha_baja			datetime		null
+);
+alter table [almacen]
+add constraint pk_almacen primary key (cod_almacen);
+
+-- planta.
+create table [planta]
+(
+	cod_planta			int				not null,
+	des_planta			nvarchar(100)	not null,
+	cod_almacen			int				not null,
+	fecha_registro		datetime		not null,
+	fecha_baja			datetime		null
+);
+alter table [planta]
+add constraint pk_planta primary key (cod_planta);
+alter table [planta]
+add constraint fk01_planta foreign key (cod_almacen) references [almacen] (cod_almacen);
+
+-- proceso.
+create table [proceso]
+(
+	cod_proceso			int				not null,
+	des_proceso			nvarchar(100)	not null,
+	interfase_MFG		bit				null,
+	requerido			bit				null,
+	cod_proceso_padre	int				null,
+	fecha_registro		datetime		not null,
+	fecha_baja			datetime		null
+);
+alter table [proceso]
+add constraint pk_proceso primary key (cod_proceso);
+alter table [proceso]
+add constraint fk01_proceso foreign key (cod_proceso_padre) references [proceso] (cod_proceso);
+
+-- centro_trabajo.
+create table [centro_trabajo]
+(
+	cod_centro_trabajo		int				not null,
+	des_centro_trabajo		nvarchar(100)	not null,
+	cod_planta				int				not null,
+	cod_proceso				int				not null,
+	linea_produccion		nvarchar(50)	not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [centro_trabajo]
+add constraint pk_centro_trabajo primary key (cod_centro_trabajo);
+alter table [centro_trabajo]
+add constraint fk01centro_trabajo foreign key (cod_planta) references [planta] (cod_planta);
+alter table [centro_trabajo]
+add constraint fk02_centro_trabajo foreign key (cod_proceso) references [proceso] (cod_proceso);
+
+-- area
+create table [area]
+(
+	cod_area				int				not null,
+	des_area				nvarchar(100)	not null,
+	cod_centro_trabajo		int				not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [area]
+add constraint pk_area primary key (cod_area);
+alter table [area]
+add constraint fk01_area foreign key (cod_centro_trabajo) references [centro_trabajo] (cod_centro_trabajo);
+
+-- tipo_maquina
+create table [tipo_maquina]
+(
+	cod_tipo_maquina		int				not null,
+	des_tipo_maquina		nvarchar(100)	not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [tipo_maquina]
+add constraint pk_tipo_maquina primary key (cod_tipo_maquina);
+
+-- maquina
+create table [maquina]
+(
+	cod_maquina				int				not null,
+	clave_maquina			nvarchar(10)	null,
+	des_maquina				nvarchar(100)	not null,
+	cod_area				int				not null,
+	cod_tipo_maquina		int				not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null,
+	horno_quemada_mes		int				null,
+	horno_quemada_fecha		datetime		null
+);
+alter table [maquina]
+add constraint pk_maquina primary key (cod_maquina);
+alter table [maquina]
+add constraint fk01_maquina foreign key (cod_area) references [area] (cod_area);
+alter table [maquina]
+add constraint fk02_maquina foreign key (cod_tipo_maquina) references [tipo_maquina] (cod_tipo_maquina);
+
+-- puesto.
+create table [puesto]
+(
+	cod_puesto			int				not null,
+	des_puesto			nvarchar(100)	not null,
+	fecha_registro		datetime		not null,
+	fecha_baja			datetime		null
+);
+alter table [puesto]
+add constraint pk_puesto primary key (cod_puesto);
+
+-- empleado.
+create table [empleado]
+(
+	cod_empleado			int				not null,
+	clave_empleado_MFG		int				not null,
+	clave_empleado_nomina	int				not null,
+	nombre					nvarchar(100)	not null,
+	ap_paterno				nvarchar(100)	not null,
+	ap_materno				nvarchar(100)	not null,
+	cod_puesto				int				not null,
+	cod_centro_trabajo		int				not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [empleado]
+add constraint pk_empleado primary key (cod_empleado);
+alter table [empleado]
+add constraint un01_empleado unique (clave_empleado_MFG);
+alter table [empleado]
+add constraint un02_empleado unique (clave_empleado_nomina);
+alter table [empleado]
+add constraint fk01_empleado foreign key (cod_puesto) references [puesto] (cod_puesto);
+alter table [empleado]
+add constraint fk02_empleado foreign key (cod_centro_trabajo) references [centro_trabajo] (cod_centro_trabajo);
+
+-- rol.
+create table [rol]
+(
+	cod_rol				int					not null,
+	des_rol				nvarchar(100)		not null,
+	fecha_registro		datetime			not null,
+	fecha_baja			datetime			null
+);
+alter table [rol]
+add constraint pk_rol primary key (cod_rol);
+
+-- usuario.
+create table [usuario]
+(
+	cod_usuario				int				not null,
+	login					nvarchar(10)	not null,
+	password				nvarchar(10)	not null,
+	cod_empleado			int				not null,
+	cod_rol					int				not null,
+	cod_supervisor			int				null,
+	num_intentos			smallint		not null default 0,
+	bloqueado				bit				not null default 0,
+	email					nvarchar(255)	null,
+	fecha_vig_password		datetime		not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [usuario]
+add constraint pk_usuario primary key (cod_usuario);
+alter table [usuario]
+add constraint fk01_usuario foreign key (cod_empleado) references [empleado] (cod_empleado);
+alter table [usuario]
+add constraint fk02_usuario foreign key (cod_rol) references [rol] (cod_rol);
+alter table [usuario]
+add constraint fk03_usuario foreign key (cod_supervisor) references [empleado] (cod_empleado);
+
+-- rol_planta.
+create table [rol_planta]
+(
+	cod_rol				int				not null,
+	cod_planta			int				not null
+);
+alter table [rol_planta]
+add constraint pk_rol_planta primary key (cod_rol, cod_planta);
+alter table [rol_planta]
+add constraint fk01_rol_planta foreign key (cod_rol) references [rol] (cod_rol);
+alter table [rol_planta]
+add constraint fk02_rol_planta foreign key (cod_planta) references [planta] (cod_planta);
+
+-- config_banco
+create table [config_banco]
+(
+	cod_config_banco		int				not null,
+	cod_maquina				int				not null,
+	cod_usuario_alta		int				not null,
+	cod_usuario_autoriza	int				null,
+	fecha_autorizacion		datetime		null,
+	fecha_inicio			datetime		not null,
+	fecha_fin				datetime		null
+);
+alter table [config_banco]
+add constraint pk_config_banco primary key (cod_config_banco);
+alter table [config_banco]
+add constraint fk01_config_banco foreign key (cod_maquina) references [maquina] (cod_maquina);
+alter table [config_banco]
+add constraint fk02_config_banco foreign key (cod_usuario_alta) references [usuario] (cod_usuario);
+alter table [config_banco]
+add constraint fk03_config_banco foreign key (cod_usuario_autoriza) references [usuario] (cod_usuario);
+
+-- molde
+create table [molde]
+(
+	cod_molde				int				not null,
+	clave_molde				nvarchar(10)	null,
+	des_molde				nvarchar(100)	not null,
+	num_impresiones			int				not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [molde]
+add constraint pk_molde primary key (cod_molde);
+
+-- config_banco_molde_det
+create table [config_banco_molde_det]
+(
+	cod_consecutivo			int 			not null,
+	cod_config_banco		int				not null,
+	cod_molde				int				not null,
+	limite_vaciadas			int				not null,
+	vaciadas_acumuladas		int				not null,
+	vaciadas_dia			int				not null,
+	cantidad_moldes			int				not null
+);
+alter table [config_banco_molde_det]
+add constraint pk_config_banco_molde_det primary key (cod_consecutivo);
+alter table [config_banco_molde_det]
+add constraint fk01_config_banco_molde_det foreign key (cod_config_banco) references [config_banco] (cod_config_banco);
+alter table [config_banco_molde_det]
+add constraint fk02_config_banco_molde_det foreign key (cod_molde) references [molde] (cod_molde);
+
+-- config_banco_molde
+create table [config_banco_molde]
+(
+	cod_consecutivo			int 			not null,
+	posicion				int 			not null
+);
+alter table [config_banco_molde]
+add constraint pk_config_banco_molde primary key (cod_consecutivo, posicion);
+alter table [config_banco_molde]
+add constraint fk01_config_banco_molde foreign key (cod_consecutivo) references [config_banco_molde_det] (cod_consecutivo);
+
+-- tipo_articulo
+create table [tipo_articulo]
+(
+	cod_tipo_articulo			int				not null,
+	clave_tipo_articulo			nvarchar(10)	null,
+	des_tipo_articulo			nvarchar(100)	null,
+	fecha_registro				datetime		not null,
+	fecha_baja					datetime		null
+);
+alter table [tipo_articulo]
+add constraint pk_tipo_articulo primary key (cod_tipo_articulo);
+
+-- grupo_articulo
+create table [grupo_articulo]
+(
+	cod_grupo_articulo			int				not null,
+	des_grupo_articulo			nvarchar(100)	not null,
+	fecha_registro				datetime		not null,
+	fecha_baja					datetime		null
+);
+alter table [grupo_articulo]
+add constraint pk_grupo_articulo primary key (cod_grupo_articulo);
+
+-- articulo
+create table [articulo]
+(
+	cod_articulo				int				not null,
+	clave_articulo				nvarchar(10)	null,
+	des_articulo				nvarchar(100)	not null,
+	cod_tipo_articulo			int				not null,
+	cod_molde					int				not null,
+	cod_grupo_articulo			int				not null,
+	fecha_registro				datetime		not null,
+	fecha_baja					datetime		null
+);
+alter table [articulo]
+add constraint pk_articulo primary key (cod_articulo);
+alter table [articulo]
+add constraint fk01_articulo foreign key (cod_tipo_articulo) references [tipo_articulo] (cod_tipo_articulo);
+alter table [articulo]
+add constraint fk02_articulo foreign key (cod_molde) references [molde] (cod_molde);
+alter table [articulo]
+add constraint fk03_articulo foreign key (cod_grupo_articulo) references [grupo_articulo] (cod_grupo_articulo);
+
+-- color
+create table [color]
+(
+	cod_color				int				not null,
+	clave_color				nvarchar(10)	not null,
+	des_color				nvarchar(50)	not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [color]
+add constraint pk_color primary key (cod_color);
+
+-- calidad
+create table [calidad]
+(
+	cod_calidad				int				not null,
+	clave_calidad			nvarchar(10)	not null,
+	des_calidad				nvarchar(50)	not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [calidad]
+add constraint pk_calidad primary key (cod_calidad);
+
+-- pieza
+create table [pieza]
+(
+	cod_pieza				int				not null,
+	cod_barras				nvarchar(15)	not null,
+	cod_config_banco		int				null,
+	cod_consecutivo			int				null,
+	posicion				int				null,
+	cod_articulo			int				null,
+	cod_color				int				null,
+	cod_calidad				int				null,
+	cod_planta				int				not null
+);
+alter table [pieza]
+add constraint pk_pieza primary key (cod_pieza);
+alter table [pieza]
+add constraint fk01_pieza foreign key (cod_config_banco) references [config_banco] (cod_config_banco);
+alter table [pieza]
+add constraint fk02_pieza foreign key (cod_consecutivo, posicion) references [config_banco_molde] (cod_consecutivo, posicion);
+alter table [pieza]
+add constraint fk03_pieza foreign key (cod_articulo) references [articulo] (cod_articulo);
+alter table [pieza]
+add constraint fk04_pieza foreign key (cod_color) references [color] (cod_color);
+alter table [pieza]
+add constraint fk05_pieza foreign key (cod_calidad) references [calidad] (cod_calidad);
+alter table [pieza]
+add constraint fk06_pieza foreign key (cod_planta) references [planta] (cod_planta);
+
+-- carro_pieza
+create table [carro_pieza]
+(
+	cod_planta				int				not null,
+	cod_proceso				int				not null,
+	cod_carro				int				not null,
+	cod_pieza				int				not null
+);
+alter table [carro_pieza]
+add constraint pk_carro_pieza primary key (cod_planta, cod_proceso, cod_carro, cod_pieza);
+alter table [carro_pieza]
+add constraint fk01_carro_pieza foreign key (cod_planta) references [planta] (cod_planta);
+alter table [carro_pieza]
+add constraint fk02_carro_pieza foreign key (cod_proceso) references [proceso] (cod_proceso);
+alter table [carro_pieza]
+add constraint fk03_carro_pieza foreign key (cod_pieza) references [pieza] (cod_pieza);
+
+-- prueba
+create table [prueba]
+(
+	cod_prueba				int				not null,
+	des_prueba				nvarchar(100)	not null,
+	cod_planta				int				not null,
+	cod_proceso				int				not null,
+	cod_proceso_fin			int				not null,
+	residencia_max			int				not null,
+	fecha_registro			datetime		not null,
+	fecha_baja				datetime		null
+);
+alter table [prueba]
+add constraint pk_prueba primary key (cod_prueba);
+alter table [prueba]
+add constraint fk01_prueba foreign key (cod_planta) references [planta] (cod_planta);
+alter table [prueba]
+add constraint fk02_prueba foreign key (cod_proceso) references [proceso] (cod_proceso);
+alter table [prueba]
+add constraint fk03_prueba foreign key (cod_proceso_fin) references [proceso] (cod_proceso);
+
+-- turno.
+create table [turno]
+(
+	cod_turno			int				not null,
+	des_turno			nvarchar(100)	not null,
+	hora_inicio			datetime		not null,
+	hora_fin			datetime		not null,
+	fecha_registro		datetime		not null,
+	fecha_baja			datetime		null
+);
+alter table [turno]
+add constraint pk_turno primary key (cod_turno);
+
+-- config_handheld
+create table [config_handheld]
+(
+	cod_config_handheld		bigint		not null,
+	cod_usuario				int			not null,
+	cod_operador			int			not null,
+	cod_supervisor			int			not null,
+	fecha					datetime	not null,
+	cod_turno				int			not null,
+	cod_planta				int			not null,
+	cod_proceso				int			not null,
+	cod_config_banco		int			null
+);
+alter table [config_handheld]
+add constraint pk_config_handheld primary key (cod_config_handheld);
+alter table [config_handheld]
+add constraint fk01_config_handheld foreign key (cod_usuario) references [usuario] (cod_usuario);
+alter table [config_handheld]
+add constraint fk02_config_handheld foreign key (cod_operador) references [empleado] (cod_empleado);
+alter table [config_handheld]
+add constraint fk03_config_handheld foreign key (cod_supervisor) references [empleado] (cod_empleado);
+alter table [config_handheld]
+add constraint fk04_config_handheld foreign key (cod_turno) references [turno] (cod_turno);
+alter table [config_handheld]
+add constraint fk05_config_handheld foreign key (cod_planta) references [planta] (cod_planta);
+alter table [config_handheld]
+add constraint fk06_config_handheld foreign key (cod_proceso) references [proceso] (cod_proceso);
+alter table [config_handheld]
+add constraint fk07_config_handheld foreign key (cod_config_banco) references [config_banco] (cod_config_banco);
+
+-- pieza_transaccion
+create table [pieza_transaccion]
+(
+	cod_pieza_transaccion	bigint			not null,
+	cod_config_handheld		bigint			not null,
+	cod_pieza				int				not null,
+	fecha_registro			datetime		not null
+);
+alter table [pieza_transaccion]
+add constraint pk_pieza_transaccion primary key (cod_pieza_transaccion);
+alter table [pieza_transaccion]
+add constraint fk01_pieza_transaccion foreign key (cod_config_handheld) references [config_handheld] (cod_config_handheld);
+alter table [pieza_transaccion]
+add constraint fk02_pieza_transaccion foreign key (cod_pieza) references [pieza] (cod_pieza);
+
+-- secador_transaccion
+create table [secador_transaccion]
+(
+	cod_config_handheld		bigint		not null,
+	hora_inicio				datetime	not null,
+	horas_secado			float		not null
+);
+alter table [secador_transaccion]
+add constraint pk_secador_transaccion primary key (cod_config_handheld);
+alter table [pieza_transaccion]
+add constraint fk01_secador_transaccion foreign key (cod_config_handheld) references [config_handheld] (cod_config_handheld);
+
+-- SCPP_pantalla.
+create table [SCPP_pantalla]
+(
+	cod_pantalla		int				not null,
+	des_pantalla		nvarchar(100)	not null,
+	fecha_registro		datetime		not null,
+	fecha_baja			datetime		null
+);
+alter table [SCPP_pantalla]
+add constraint pk_SCPP_pantalla primary key (cod_pantalla);
+
+-- proceso_pantalla
+create table [proceso_pantalla]
+(
+	cod_proceso			int				not null,
+	cod_pantalla		int				not null
+);
+alter table [proceso_pantalla]
+add constraint pk_proceso_pantalla primary key (cod_proceso, cod_pantalla);
+alter table [proceso_pantalla]
+add constraint fk01_proceso_pantalla foreign key (cod_proceso) references [proceso] (cod_proceso);
+alter table [proceso_pantalla]
+add constraint fk02_proceso_pantalla foreign key (cod_pantalla) references [SCPP_pantalla] (cod_pantalla);
+
+--------------------------------------------------------------------

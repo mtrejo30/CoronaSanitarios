@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="Lamosa.SCPP.ServiceManager.Interfaces" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="Lamosa.SCPP.ServiceManager.Interfaces" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Lamosa.SCPP.ServiceManager.Interfaces/Imports">
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.AlertaServiceManager.svc?xsd=xsd3" namespace="Lamosa.SCPP.ServiceManager.Interfaces" />
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.AlertaServiceManager.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.AlertaServiceManager.svc?xsd=xsd1" namespace="Lamosa.SCPP.Common.Entities.ClassImpl" />
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.AlertaServiceManager.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAlertaServiceManager_ObtenerAlerta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAlerta" />
+  </wsdl:message>
+  <wsdl:message name="IAlertaServiceManager_ObtenerAlerta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAlertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlertaServiceManager_ObtenerConfigAlerta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConfigAlerta" />
+  </wsdl:message>
+  <wsdl:message name="IAlertaServiceManager_ObtenerConfigAlerta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConfigAlertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlertaServiceManager_ObtenerDestinatario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDestinatario" />
+  </wsdl:message>
+  <wsdl:message name="IAlertaServiceManager_ObtenerDestinatario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDestinatarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAlertaServiceManager_Eliminar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Eliminar" />
+  </wsdl:message>
+  <wsdl:message name="IAlertaServiceManager_Eliminar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAlertaServiceManager">
+    <wsdl:operation name="ObtenerAlerta">
+      <wsdl:input wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/ObtenerAlerta" message="tns:IAlertaServiceManager_ObtenerAlerta_InputMessage" />
+      <wsdl:output wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/ObtenerAlertaResponse" message="tns:IAlertaServiceManager_ObtenerAlerta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerConfigAlerta">
+      <wsdl:input wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/ObtenerConfigAlerta" message="tns:IAlertaServiceManager_ObtenerConfigAlerta_InputMessage" />
+      <wsdl:output wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/ObtenerConfigAlertaResponse" message="tns:IAlertaServiceManager_ObtenerConfigAlerta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDestinatario">
+      <wsdl:input wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/ObtenerDestinatario" message="tns:IAlertaServiceManager_ObtenerDestinatario_InputMessage" />
+      <wsdl:output wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/ObtenerDestinatarioResponse" message="tns:IAlertaServiceManager_ObtenerDestinatario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Eliminar">
+      <wsdl:input wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/Eliminar" message="tns:IAlertaServiceManager_Eliminar_InputMessage" />
+      <wsdl:output wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IAlertaServiceManager/EliminarResponse" message="tns:IAlertaServiceManager_Eliminar_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

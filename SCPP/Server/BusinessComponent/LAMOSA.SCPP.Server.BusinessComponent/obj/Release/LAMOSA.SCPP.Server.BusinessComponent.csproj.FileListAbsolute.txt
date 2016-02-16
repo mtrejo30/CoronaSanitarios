@@ -1,0 +1,12 @@
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\LAMOSA.SCPP.Server.BusinessComponent.dll.config
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\LAMOSA.SCPP.Server.BusinessComponent.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\LAMOSA.SCPP.Server.BusinessComponent.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\Common.DataAccess.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\Common.SolutionEntityFramework.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\LAMOSA.SCPP.Server.BusinessEntity.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\Common.SolutionEntityFramework.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\Common.DataAccess.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\bin\Release\LAMOSA.SCPP.Server.BusinessEntity.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\obj\Release\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\obj\Release\LAMOSA.SCPP.Server.BusinessComponent.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\BusinessComponent\LAMOSA.SCPP.Server.BusinessComponent\obj\Release\LAMOSA.SCPP.Server.BusinessComponent.pdb

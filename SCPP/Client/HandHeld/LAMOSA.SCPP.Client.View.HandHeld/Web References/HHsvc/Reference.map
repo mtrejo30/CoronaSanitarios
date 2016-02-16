@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?disco" filename="SCPPHHService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?wsdl" filename="SCPP_HH.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd0" filename="SCPPHHService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd4" filename="SCPPHHService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd1" filename="SCPPHHService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd2" filename="SCPPHHService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd3" filename="SCPPHHService3.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

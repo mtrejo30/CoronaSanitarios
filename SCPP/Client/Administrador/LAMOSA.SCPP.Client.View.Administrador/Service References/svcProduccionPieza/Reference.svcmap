@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ff60a28-96f9-4e60-9ce7-4dcbbf457d10" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/scpp/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Lamosa2.wsdl" MetadataType="Wsdl" ID="78d1d118-2b28-461c-af09-5d8b07862a5c" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProduccionPiezaServiceManager1.wsdl" MetadataType="Wsdl" ID="d683cb75-d31e-45df-a017-9468ac6e7783" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?wsdl" />
+    <MetadataFile FileName="Lamosa4.xsd" MetadataType="Schema" ID="cb54cfe0-3d7f-48c5-bc24-36aec34299c5" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?xsd=xsd0" />
+    <MetadataFile FileName="Lamosa1.disco" MetadataType="Disco" ID="d58c6df2-f281-4fc8-b19b-99978581c341" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?disco" />
+    <MetadataFile FileName="Lamosa21.wsdl" MetadataType="Wsdl" ID="772dc4de-edb6-4364-acfe-329d69fbe34e" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="Lamosa41.xsd" MetadataType="Schema" ID="1e63865a-67a9-4019-bbb5-af8c883f5dae" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?xsd=xsd3" />
+    <MetadataFile FileName="Lamosa42.xsd" MetadataType="Schema" ID="494e56a6-72bc-4ed7-9b3e-317b72eb0b19" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?xsd=xsd1" />
+    <MetadataFile FileName="Lamosa43.xsd" MetadataType="Schema" ID="d3379c75-0e6c-4f20-b205-adbc930b47ff" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.ProduccionPiezaServiceManager.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

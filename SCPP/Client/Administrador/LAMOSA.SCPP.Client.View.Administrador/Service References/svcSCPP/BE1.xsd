@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://LAMOSA/SCPP/BE" elementFormDefault="qualified" targetNamespace="http://LAMOSA/SCPP/BE" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RepCapInstalada">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Banco" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CantidadMoldes" type="xs:int" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumImpresiones" type="xs:int" />
+          <xs:element minOccurs="0" name="PiezasVaciadasDia" type="xs:int" />
+          <xs:element minOccurs="0" name="Seis" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VaciadasXDia" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RepCapInstalada" nillable="true" type="tns:RepCapInstalada" />
+  <xs:complexType name="BSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EM" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BSE" nillable="true" type="tns:BSE" />
+  <xs:complexType name="Calidad">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClaveCalidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodCalidad" type="xs:int" />
+          <xs:element minOccurs="0" name="DesCalidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Calidad" nillable="true" type="tns:Calidad" />
+  <xs:complexType name="ArrayOfBSE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BSE" nillable="true" type="tns:BSE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBSE" nillable="true" type="tns:ArrayOfBSE" />
+  <xs:complexType name="MetasProd">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Calidad1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Calidad2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Calidad3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Calidad4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CantDesp" type="xs:int" />
+          <xs:element minOccurs="0" name="CantInv" type="xs:int" />
+          <xs:element minOccurs="0" name="CantProc" type="xs:int" />
+          <xs:element minOccurs="0" name="CantQuemado" type="xs:int" />
+          <xs:element minOccurs="0" name="CantVerde" type="xs:int" />
+          <xs:element minOccurs="0" name="CodMetas" type="xs:int" />
+          <xs:element minOccurs="0" name="ICalidad1" type="xs:int" />
+          <xs:element minOccurs="0" name="ICalidad2" type="xs:int" />
+          <xs:element minOccurs="0" name="ICalidad3" type="xs:int" />
+          <xs:element minOccurs="0" name="ICalidad4" type="xs:int" />
+          <xs:element minOccurs="0" name="Inventarios" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PiezasMalas" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PiezasMalasQuemado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PiezasMalasVerde" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PiezasProcesadas" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Planta" type="xs:int" />
+          <xs:element minOccurs="0" name="PorcCal1" type="xs:int" />
+          <xs:element minOccurs="0" name="PorcCal2" type="xs:int" />
+          <xs:element minOccurs="0" name="PorcCal3" type="xs:int" />
+          <xs:element minOccurs="0" name="PorcCal4" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoCal1" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoCal2" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoCal3" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoCal4" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoDesp" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoInv" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoProc" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoQuemado" type="xs:int" />
+          <xs:element minOccurs="0" name="TipoVerde" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MetasProd" nillable="true" type="tns:MetasProd" />
+  <xs:complexType name="Planta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveAlmacen" type="xs:int" />
+          <xs:element minOccurs="0" name="ClavePlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="DescripcionAlmacen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescripcionPlanta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Planta" nillable="true" type="tns:Planta" />
+  <xs:complexType name="Prueba">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClavePrueba" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProcesoFin" type="xs:int" />
+          <xs:element minOccurs="0" name="DesProceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesProcesoFin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesPrueba" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ResidenciaMax" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Prueba" nillable="true" type="tns:Prueba" />
+  <xs:complexType name="Usuario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="APaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Activo" type="xs:int" />
+          <xs:element minOccurs="0" name="Bloqueado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodEmpleado" type="xs:int" />
+          <xs:element minOccurs="0" name="CodRol" type="xs:int" />
+          <xs:element minOccurs="0" name="CodSupervisor" type="xs:int" />
+          <xs:element minOccurs="0" name="CodUsuario" type="xs:int" />
+          <xs:element minOccurs="0" name="Contrasena" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesRol" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaVigPassword" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreUsuario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="Turno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodTurno" type="xs:int" />
+          <xs:element minOccurs="0" name="DesTurno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HoraFin" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="HoraInicio" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Turno" nillable="true" type="tns:Turno" />
+  <xs:complexType name="CondicionPasta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:int" />
+          <xs:element minOccurs="0" name="Autorizacion" type="xs:int" />
+          <xs:element minOccurs="0" name="Bu" type="xs:double" />
+          <xs:element minOccurs="0" name="CodCondicionPasta" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="Densidad" type="xs:double" />
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaAutorizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="UsuarioAutoriza" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CondicionPasta" nillable="true" type="tns:CondicionPasta" />
+  <xs:complexType name="CondicionOperacion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:int" />
+          <xs:element minOccurs="0" name="Autorizacion" type="xs:int" />
+          <xs:element minOccurs="0" name="CodArea" type="xs:int" />
+          <xs:element minOccurs="0" name="CodCondicionOperacion" type="xs:int" />
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaAutorizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Humedad" type="xs:double" />
+          <xs:element minOccurs="0" name="Temperatura" type="xs:double" />
+          <xs:element minOccurs="0" name="UsuarioAutoriza" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CondicionOperacion" nillable="true" type="tns:CondicionOperacion" />
+  <xs:complexType name="Rol">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveRol" type="xs:int" />
+          <xs:element minOccurs="0" name="DescripcionRol" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Rol" nillable="true" type="tns:Rol" />
+  <xs:complexType name="Configuracion">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodConfiguracion" type="xs:int" />
+          <xs:element minOccurs="0" name="DesConfiguracion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ValorConfiguracion" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Configuracion" nillable="true" type="tns:Configuracion" />
+  <xs:complexType name="CondicionEsmalte">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:int" />
+          <xs:element minOccurs="0" name="Autorizacion" type="xs:int" />
+          <xs:element minOccurs="0" name="CodCondicionEsmalte" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="Densidad" type="xs:double" />
+          <xs:element minOccurs="0" name="Espesor" type="xs:double" />
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaAutorizacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TiempoEspejo" type="xs:double" />
+          <xs:element minOccurs="0" name="UsuarioAutoriza" type="xs:int" />
+          <xs:element minOccurs="0" name="Viscosidad" type="xs:double" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CondicionEsmalte" nillable="true" type="tns:CondicionEsmalte" />
+  <xs:complexType name="ConfigBancoResgistro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CantMoldes" type="xs:int" />
+      <xs:element minOccurs="0" name="CodConfigBanco" type="xs:int" />
+      <xs:element minOccurs="0" name="CodMaquina" type="xs:int" />
+      <xs:element minOccurs="0" name="CodMolde" type="xs:int" />
+      <xs:element minOccurs="0" name="CodUsuarioAlta" type="xs:int" />
+      <xs:element minOccurs="0" name="Limitevaciadas" type="xs:int" />
+      <xs:element minOccurs="0" name="Vaciadasdia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfigBancoResgistro" nillable="true" type="tns:ConfigBancoResgistro" />
+  <xs:complexType name="RutaProceso">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodAlmacen" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProcesoPadre" type="xs:int" />
+          <xs:element minOccurs="0" name="MFG" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrdenOpera" type="xs:int" />
+          <xs:element minOccurs="0" name="Proceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcesoPadre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Requerido" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RutaProceso" nillable="true" type="tns:RutaProceso" />
+  <xs:complexType name="Inventario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClaveInventario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodInventario" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="DesInventario" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesPlanta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Inventario" nillable="true" type="tns:Inventario" />
+  <xs:complexType name="ConfigBancos">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Autoriza" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Autorizado" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodCT" type="xs:int" />
+          <xs:element minOccurs="0" name="CodConfigBanco" type="xs:int" />
+          <xs:element minOccurs="0" name="CodMaquina" type="xs:int" />
+          <xs:element minOccurs="0" name="CodUsuarioAlta" type="xs:int" />
+          <xs:element minOccurs="0" name="CodUsuarioAutoriza" type="xs:int" />
+          <xs:element minOccurs="0" name="DesCentroTrabajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesMaquina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfigBancos" nillable="true" type="tns:ConfigBancos" />
+  <xs:complexType name="CodigoBarra">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveCentroTrabajo" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveCodigoBarra" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveEmpleado" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveMaquina" type="xs:int" />
+          <xs:element minOccurs="0" name="ClavePlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="CodigoDesde" type="xs:int" />
+          <xs:element minOccurs="0" name="CodigoHasta" type="xs:int" />
+          <xs:element minOccurs="0" name="DescripcionCentroTrabajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescripcionEmpleado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescripcionMaquina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DescripcionPlanta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CodigoBarra" nillable="true" type="tns:CodigoBarra" />
+  <xs:complexType name="Color">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClaveColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodColor" type="xs:int" />
+          <xs:element minOccurs="0" name="DesColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Color" nillable="true" type="tns:Color" />
+  <xs:complexType name="ArticuloPars">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodMolde" type="xs:int" />
+          <xs:element minOccurs="0" name="CodTipoArticulo" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArticuloPars" nillable="true" type="tns:ArticuloPars" />
+  <xs:complexType name="Articulo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClaveArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodGrupoArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodMolde" type="xs:int" />
+          <xs:element minOccurs="0" name="CodTipoArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="DesArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesMolde" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesTipoArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Articulo" nillable="true" type="tns:Articulo" />
+  <xs:complexType name="ArticuloCbo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="DesArticulo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ArticuloCbo" nillable="true" type="tns:ArticuloCbo" />
+  <xs:complexType name="TipoArticuloCbo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodTipoArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="DesTipoArticulo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TipoArticuloCbo" nillable="true" type="tns:TipoArticuloCbo" />
+  <xs:complexType name="MoldeCbo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodMolde" type="xs:int" />
+          <xs:element minOccurs="0" name="DesMolde" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MoldeCbo" nillable="true" type="tns:MoldeCbo" />
+  <xs:complexType name="Molde">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ClaveMolde" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodMolde" type="xs:int" />
+          <xs:element minOccurs="0" name="DesMolde" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="NumImpresiones" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Molde" nillable="true" type="tns:Molde" />
+  <xs:complexType name="LoginUsuario">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodUsuario" type="xs:int" />
+          <xs:element minOccurs="0" name="Login" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LoginUsuario" nillable="true" type="tns:LoginUsuario" />
+  <xs:complexType name="Defecto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveDefecto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveUnica" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProcesoResp" type="xs:int" />
+          <xs:element minOccurs="0" name="CodTipoDefecto" type="xs:int" />
+          <xs:element minOccurs="0" name="DescDefecto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Proceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProcesoResponsable" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoDefecto" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Defecto" nillable="true" type="tns:Defecto" />
+  <xs:complexType name="ZonaDefecto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveTipoArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveUnica" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveZonaDefecto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TipoArticulo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ZonaDefecto" nillable="true" type="tns:ZonaDefecto" />
+  <xs:complexType name="Almacen">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveAlmacen" type="xs:int" />
+          <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Almacen" nillable="true" type="tns:Almacen" />
+  <xs:complexType name="CentroTrabajo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodCentroTrabajo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="DesCentroTrabajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesProceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LineaProduccion" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CentroTrabajo" nillable="true" type="tns:CentroTrabajo" />
+  <xs:complexType name="EstructuraPlanta">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Almacen" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Area" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CentroTrabajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LineaProduccion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Maquina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Planta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Proceso" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EstructuraPlanta" nillable="true" type="tns:EstructuraPlanta" />
+  <xs:complexType name="ProcesoCbo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="DescripcionProceso" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProcesoCbo" nillable="true" type="tns:ProcesoCbo" />
+  <xs:complexType name="Proceso">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProcesoPadre" type="xs:int" />
+          <xs:element minOccurs="0" name="DesProceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesProcesoPadre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaBaja" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MFG" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Requerido" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Proceso" nillable="true" type="tns:Proceso" />
+  <xs:complexType name="Empleado">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApellidoMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApellidoPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CentroDeTrabajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveMFG" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveNomina" type="xs:int" />
+          <xs:element minOccurs="0" name="DesPlanta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Puesto" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Empleado" nillable="true" type="tns:Empleado" />
+  <xs:complexType name="PlantaCbo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClavePlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="DescripcionPlanta" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlantaCbo" nillable="true" type="tns:PlantaCbo" />
+  <xs:complexType name="MaquinaCbo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveMaquina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodMaquina" type="xs:int" />
+          <xs:element minOccurs="0" name="DesMaquina" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MaquinaCbo" nillable="true" type="tns:MaquinaCbo" />
+  <xs:complexType name="Maquina">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveMaquina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodCentroTrabajo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodMaquina" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="CodTipoMaquina" type="xs:int" />
+          <xs:element minOccurs="0" name="DesCentroTrabajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesMaquina" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesProceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesTipoMaquina" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Maquina" nillable="true" type="tns:Maquina" />
+  <xs:complexType name="Puesto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CodPuesto" type="xs:int" />
+          <xs:element minOccurs="0" name="DesPuesto" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Puesto" nillable="true" type="tns:Puesto" />
+  <xs:complexType name="EmpleadoBusqueda">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApMaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ApPaterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodEmpleado" type="xs:int" />
+          <xs:element minOccurs="0" name="CodEmpleadoMFG" type="xs:int" />
+          <xs:element minOccurs="0" name="DescPuesto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NombreCompleto" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmpleadoBusqueda" nillable="true" type="tns:EmpleadoBusqueda" />
+  <xs:complexType name="ConfigBancoDetalle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CantidadMoldes" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveMolde" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveTipoArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodConfigBanco" type="xs:int" />
+          <xs:element minOccurs="0" name="CodMolde" type="xs:int" />
+          <xs:element minOccurs="0" name="CodTipoArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="DesArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LimiteVaciadas" type="xs:int" />
+          <xs:element minOccurs="0" name="NumImpresiones" type="xs:int" />
+          <xs:element minOccurs="0" name="Posicion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VaciadasAcumuladas" type="xs:int" />
+          <xs:element minOccurs="0" name="VaciadasDiarias" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConfigBancoDetalle" nillable="true" type="tns:ConfigBancoDetalle" />
+  <xs:complexType name="InventarioEnProceso">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+          <xs:element minOccurs="0" name="ClaveArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClaveTipoArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodAlmacen" type="xs:int" />
+          <xs:element minOccurs="0" name="CodCalidad" type="xs:int" />
+          <xs:element minOccurs="0" name="CodColor" type="xs:int" />
+          <xs:element minOccurs="0" name="CodModeloArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="CodTipoArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="DesArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesCalidad" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesCentroTrabajo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesPlanta" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesProceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesTipoArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InventarioEnProceso" nillable="true" type="tns:InventarioEnProceso" />
+  <xs:complexType name="PiezaReemplazo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:BSE">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ClaveArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CodArticulo" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPieza" type="xs:int" />
+          <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+          <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+          <xs:element minOccurs="0" name="CodigoBarras" type="xs:int" />
+          <xs:element minOccurs="0" name="DesArticulo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DesProceso" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PiezaReemplazo" nillable="true" type="tns:PiezaReemplazo" />
+</xs:schema>

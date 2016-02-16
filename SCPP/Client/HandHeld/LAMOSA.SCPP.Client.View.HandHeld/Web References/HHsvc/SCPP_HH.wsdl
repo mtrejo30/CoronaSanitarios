@@ -1,0 +1,2625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="SCPP_HH" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc?xsd=xsd4" namespace="http://LAMOSA/SCPP/BE" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchSecadoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchSecadoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchSecadoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchSecadoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerFechaServidor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaServidor" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerFechaServidor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaServidorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchRevisadoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchRevisadoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchRevisadoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchRevisadoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchHornosPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchHornosPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchHornosPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchHornosPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerConfigBancoCasetaTanque_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConfigBancoCasetaTanque" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerConfigBancoCasetaTanque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerConfigBancoCasetaTanqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerOperador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerOperador" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerOperador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerOperadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_LogIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_LogIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTipoArticuloPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoArticuloPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTipoArticuloPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTipoArticuloPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerKardexPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerKardexPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerKardexPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerKardexPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCarrosPendientesSecador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCarrosPendientesSecador" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCarrosPendientesSecador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCarrosPendientesSecadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCarrosPendientesSecadorDetalle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCarrosPendientesSecadorDetalle" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCarrosPendientesSecadorDetalle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCarrosPendientesSecadorDetalleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProduccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProduccion" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProduccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProduccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerMensajeInicioSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajeInicioSesion" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerMensajeInicioSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMensajeInicioSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarPoliticaContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarPoliticaContrasena" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarPoliticaContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarPoliticaContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_CambiarPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarPassword" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_CambiarPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HabilitarImpresionEtiqueta_InputMessage">
+    <wsdl:part name="parameters" element="tns:HabilitarImpresionEtiqueta" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HabilitarImpresionEtiqueta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HabilitarImpresionEtiquetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_TienePermisoReImpresion_InputMessage">
+    <wsdl:part name="parameters" element="tns:TienePermisoReImpresion" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_TienePermisoReImpresion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TienePermisoReImpresionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_CerrarTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_CerrarTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EnTarimarPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnTarimarPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EnTarimarPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnTarimarPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTarimaPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarimaPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTarimaPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarimaPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EsTarimaValida_InputMessage">
+    <wsdl:part name="parameters" element="tns:EsTarimaValida" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EsTarimaValida_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EsTarimaValidaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_AbrirTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:AbrirTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_AbrirTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AbrirTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_DesEnTarimar_InputMessage">
+    <wsdl:part name="parameters" element="tns:DesEnTarimar" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_DesEnTarimar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DesEnTarimarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ImportarTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportarTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ImportarTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportarTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezaEnTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezaEnTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezaEnTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezaEnTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EsValidaTarimaImportar_InputMessage">
+    <wsdl:part name="parameters" element="tns:EsValidaTarimaImportar" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EsValidaTarimaImportar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EsValidaTarimaImportarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EnTarimadoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnTarimadoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EnTarimadoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnTarimadoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTiempoEnMinutosCapturaColor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTiempoEnMinutosCapturaColor" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTiempoEnMinutosCapturaColor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTiempoEnMinutosCapturaColorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_IncrementarContadorIntentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncrementarContadorIntentos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_IncrementarContadorIntentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncrementarContadorIntentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ReiniciarContadorIntentos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReiniciarContadorIntentos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ReiniciarContadorIntentos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReiniciarContadorIntentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezaInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezaInventario" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezaInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezaInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaInventario" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaInventario" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertaPiezaReemplazo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaPiezaReemplazo" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertaPiezaReemplazo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaPiezaReemplazoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteCambioEnProceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteCambioEnProceso" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteCambioEnProceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteCambioEnProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EnvioDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnvioDT" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EnvioDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnvioDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertaError_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaError" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertaError_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertaErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModelos2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModelos2" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModelos2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModelos2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarModeloPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarModeloPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarModeloPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarModeloPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarCalidadPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCalidadPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarCalidadPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCalidadPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerDefectos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDefectos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerDefectos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDefectosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerZonasDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerZonasDefecto" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerZonasDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerZonasDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerEstadosDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadosDefecto" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerEstadosDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadosDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCalidades_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalidades" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCalidades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteModelo" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerDesProceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDesProceso" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerDesProceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDesProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTiposModelo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposModelo" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTiposModelo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTiposModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModelos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModelos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModelos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModelosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteModeloHastaRevisado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteModeloHastaRevisado" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteModeloHastaRevisado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteModeloHastaRevisadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteModeloDesdeEsmaltado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteModeloDesdeEsmaltado" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteModeloDesdeEsmaltado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteModeloDesdeEsmaltadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EstaEnInventarioPocesoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstaEnInventarioPocesoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EstaEnInventarioPocesoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstaEnInventarioPocesoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModeloTipoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModeloTipoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModeloTipoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModeloTipoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModeloTipoPieza2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModeloTipoPieza2" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerModeloTipoPieza2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerModeloTipoPieza2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerColorPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerColorPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerColorPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerColorPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarTarimaPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTarimaPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarTarimaPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarTarimaPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_DeleteTarimaPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTarimaPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_DeleteTarimaPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTarimaPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EsCasetaTanque_InputMessage">
+    <wsdl:part name="parameters" element="tns:EsCasetaTanque" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EsCasetaTanque_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EsCasetaTanqueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ImprimirEtiqueta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImprimirEtiqueta" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ImprimirEtiqueta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImprimirEtiquetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezasRequeme_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezasRequeme" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezasRequeme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezasRequemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchEsmaltadoPiezas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchEsmaltadoPiezas" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchEsmaltadoPiezas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchEsmaltadoPiezasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchVaciadoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchVaciadoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ProcesarBatchVaciadoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcesarBatchVaciadoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActulizarUltimoProcesoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActulizarUltimoProcesoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActulizarUltimoProcesoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActulizarUltimoProcesoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EliminarCarro_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCarro" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EliminarCarro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCarroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarConfigHandHeld_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarConfigHandHeld" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarConfigHandHeld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarConfigHandHeldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarCarroPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCarroPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarCarroPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCarroPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaTransaccionSecador_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaTransaccionSecador" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaTransaccionSecador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaTransaccionSecadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarColorPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarColorPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarColorPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarColorPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarCarroZonaPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCarroZonaPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarCarroZonaPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCarroZonaPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaDefecto" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EliminarPiezaDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPiezaDefecto" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EliminarPiezaDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarPiezaDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaDefecto" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaUltimoEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaUltimoEstado" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaUltimoEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaUltimoEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaAuditada_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaAuditada" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarPiezaAuditada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPiezaAuditadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezasTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezasTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezasTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezasTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_RechazarTarimaPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarTarimaPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_RechazarTarimaPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RechazarTarimaPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarTarimaPaletizado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTarimaPaletizado" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarTarimaPaletizado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTarimaPaletizadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExistePiezaEnTarima_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExistePiezaEnTarima" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExistePiezaEnTarima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExistePiezaEnTarimaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarTarimaPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTarimaPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarTarimaPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTarimaPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarEtiquetaReemplazo_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarEtiquetaReemplazo" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarEtiquetaReemplazo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarEtiquetaReemplazoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerFechaDepuracionHistoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaDepuracionHistoria" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerFechaDepuracionHistoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaDepuracionHistoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerFechaDepuracionHistoria2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaDepuracionHistoria2" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerFechaDepuracionHistoria2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerFechaDepuracionHistoria2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_SyncServHH_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncServHH" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_SyncServHH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncServHHResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarCatalogos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCatalogos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarCatalogos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCatalogosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarCatalogosPorPiezas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCatalogosPorPiezas" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarCatalogosPorPiezas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCatalogosPorPiezasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarTransacciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTransacciones" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarTransacciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTransaccionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_SyncServHHLDS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncServHHLDS" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_SyncServHHLDS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncServHHLDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_TablasCatalogosHH_InputMessage">
+    <wsdl:part name="parameters" element="tns:TablasCatalogosHH" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_TablasCatalogosHH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TablasCatalogosHHResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_TablasProcesoHH_InputMessage">
+    <wsdl:part name="parameters" element="tns:TablasProcesoHH" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_TablasProcesoHH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TablasProcesoHHResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncCarroPiezaIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncCarroPiezaIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncCarroPiezaIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncCarroPiezaInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncCarroPiezaQuemadoIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncCarroPiezaQuemadoIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncCarroPiezaQuemadoIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncCarroPiezaQuemadoInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncConfigHandHeldIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncConfigHandHeldIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncConfigHandHeldIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncConfigHandHeldInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaReemplazoIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaReemplazoIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaReemplazoIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaReemplazoInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaDefectoIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaDefectoIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaDefectoIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaDefectoInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaTransaccionIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaTransaccionIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaTransaccionIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaTransaccionInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaTransaccionSecadorIns_InputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaTransaccionSecadorIns" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_HHSyncPiezaTransaccionSecadorIns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HHSyncPiezaTransaccionSecadorInsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_BloquearUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:BloquearUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_BloquearUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BloquearUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EstaServicioDisponible_InputMessage">
+    <wsdl:part name="parameters" element="tns:EstaServicioDisponible" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_EstaServicioDisponible_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EstaServicioDisponibleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPlantas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPlantas" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPlantas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPlantasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProcesos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProcesos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProcesos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProcesosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPlantasRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPlantasRol" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPlantasRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPlantasRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProcesosPorRol_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProcesosPorRol" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProcesosPorRol_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProcesosPorRolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTurnos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTurnos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerTurnos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTurnosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProcesos2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProcesos2" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerProcesos2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerProcesos2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPantallasProceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPantallasProceso" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPantallasProceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPantallasProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarConfigHandHeld_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarConfigHandHeld" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarConfigHandHeld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarConfigHandHeldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteInventarioProcesoActivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteInventarioProcesoActivo" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExisteInventarioProcesoActivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExisteInventarioProcesoActivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerClaveEmpleadoMFG_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClaveEmpleadoMFG" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerClaveEmpleadoMFG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerClaveEmpleadoMFGResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerSupervisorPorDefecto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSupervisorPorDefecto" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerSupervisorPorDefecto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSupervisorPorDefectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarEmpleadoMFG_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarEmpleadoMFG" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ValidarEmpleadoMFG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarEmpleadoMFGResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCentrosTrabajo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCentrosTrabajo" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCentrosTrabajo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCentrosTrabajoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerMaquinas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaquinas" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerMaquinas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerMaquinasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPosicionesBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPosicionesBanco" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPosicionesBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPosicionesBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerArticulosMolde_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArticulosMolde" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerArticulosMolde_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerArticulosMoldeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerColores_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerColores" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerColores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerColoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPruebas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPruebas" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPruebas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPruebasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezaCarroHornos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezaCarroHornos" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezaCarroHornos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezaCarroHornosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarVaciadasAcumuladas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarVaciadasAcumuladas" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarVaciadasAcumuladas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarVaciadasAcumuladasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerNumPosicionesBanco_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerNumPosicionesBanco" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerNumPosicionesBanco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerNumPosicionesBancoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_SuperoLimiteVaciadas_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuperoLimiteVaciadas" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_SuperoLimiteVaciadas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuperoLimiteVaciadasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarVaciadasAcumuladas2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarVaciadasAcumuladas2" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ActualizarVaciadasAcumuladas2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarVaciadasAcumuladas2Response" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCodPiezaCodBarras_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodPiezaCodBarras" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCodPiezaCodBarras_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodPiezaCodBarrasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerEstadoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerEstadoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerEstadoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerUltimoProcesoPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUltimoProcesoPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerUltimoProcesoPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUltimoProcesoPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezasCarro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezasCarro" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerPiezasCarro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPiezasCarroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCodModeloPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodModeloPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCodModeloPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodModeloPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExistePiezaEnCarro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExistePiezaEnCarro" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ExistePiezaEnCarro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExistePiezaEnCarroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCalidadPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalidadPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCalidadPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCalidadPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCodMoldePieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodMoldePieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerCodMoldePieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCodMoldePiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerDefectosPiezaProceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDefectosPiezaProceso" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_ObtenerDefectosPiezaProceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDefectosPiezaProcesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPieza_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPieza" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPieza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaTransaccion_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaTransaccion" />
+  </wsdl:message>
+  <wsdl:message name="ISCPP_HH_InsertarPiezaTransaccion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPiezaTransaccionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISCPP_HH">
+    <wsdl:operation name="ProcesarBatchSecadoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchSecadoPieza" message="tns:ISCPP_HH_ProcesarBatchSecadoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchSecadoPiezaResponse" message="tns:ISCPP_HH_ProcesarBatchSecadoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaServidor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerFechaServidor" message="tns:ISCPP_HH_ObtenerFechaServidor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerFechaServidorResponse" message="tns:ISCPP_HH_ObtenerFechaServidor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchRevisadoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchRevisadoPieza" message="tns:ISCPP_HH_ProcesarBatchRevisadoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchRevisadoPiezaResponse" message="tns:ISCPP_HH_ProcesarBatchRevisadoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchHornosPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchHornosPieza" message="tns:ISCPP_HH_ProcesarBatchHornosPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchHornosPiezaResponse" message="tns:ISCPP_HH_ProcesarBatchHornosPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerConfigBancoCasetaTanque">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerConfigBancoCasetaTanque" message="tns:ISCPP_HH_ObtenerConfigBancoCasetaTanque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerConfigBancoCasetaTanqueResponse" message="tns:ISCPP_HH_ObtenerConfigBancoCasetaTanque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerOperador">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerOperador" message="tns:ISCPP_HH_ObtenerOperador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerOperadorResponse" message="tns:ISCPP_HH_ObtenerOperador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/LogIns" message="tns:ISCPP_HH_LogIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/LogInsResponse" message="tns:ISCPP_HH_LogIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoArticuloPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTipoArticuloPieza" message="tns:ISCPP_HH_ObtenerTipoArticuloPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTipoArticuloPiezaResponse" message="tns:ISCPP_HH_ObtenerTipoArticuloPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerKardexPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerKardexPieza" message="tns:ISCPP_HH_ObtenerKardexPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerKardexPiezaResponse" message="tns:ISCPP_HH_ObtenerKardexPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCarrosPendientesSecador">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCarrosPendientesSecador" message="tns:ISCPP_HH_ObtenerCarrosPendientesSecador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCarrosPendientesSecadorResponse" message="tns:ISCPP_HH_ObtenerCarrosPendientesSecador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCarrosPendientesSecadorDetalle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCarrosPendientesSecadorDetalle" message="tns:ISCPP_HH_ObtenerCarrosPendientesSecadorDetalle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCarrosPendientesSecadorDetalleResponse" message="tns:ISCPP_HH_ObtenerCarrosPendientesSecadorDetalle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProduccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProduccion" message="tns:ISCPP_HH_ObtenerProduccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProduccionResponse" message="tns:ISCPP_HH_ObtenerProduccion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajeInicioSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerMensajeInicioSesion" message="tns:ISCPP_HH_ObtenerMensajeInicioSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerMensajeInicioSesionResponse" message="tns:ISCPP_HH_ObtenerMensajeInicioSesion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPoliticaContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarPoliticaContrasena" message="tns:ISCPP_HH_ValidarPoliticaContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarPoliticaContrasenaResponse" message="tns:ISCPP_HH_ValidarPoliticaContrasena_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/CambiarPassword" message="tns:ISCPP_HH_CambiarPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/CambiarPasswordResponse" message="tns:ISCPP_HH_CambiarPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarImpresionEtiqueta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HabilitarImpresionEtiqueta" message="tns:ISCPP_HH_HabilitarImpresionEtiqueta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HabilitarImpresionEtiquetaResponse" message="tns:ISCPP_HH_HabilitarImpresionEtiqueta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TienePermisoReImpresion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/TienePermisoReImpresion" message="tns:ISCPP_HH_TienePermisoReImpresion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/TienePermisoReImpresionResponse" message="tns:ISCPP_HH_TienePermisoReImpresion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CerrarTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/CerrarTarima" message="tns:ISCPP_HH_CerrarTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/CerrarTarimaResponse" message="tns:ISCPP_HH_CerrarTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnTarimarPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EnTarimarPieza" message="tns:ISCPP_HH_EnTarimarPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EnTarimarPiezaResponse" message="tns:ISCPP_HH_EnTarimarPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarimaPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTarimaPieza" message="tns:ISCPP_HH_ObtenerTarimaPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTarimaPiezaResponse" message="tns:ISCPP_HH_ObtenerTarimaPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EsTarimaValida">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EsTarimaValida" message="tns:ISCPP_HH_EsTarimaValida_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EsTarimaValidaResponse" message="tns:ISCPP_HH_EsTarimaValida_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AbrirTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/AbrirTarima" message="tns:ISCPP_HH_AbrirTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/AbrirTarimaResponse" message="tns:ISCPP_HH_AbrirTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DesEnTarimar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/DesEnTarimar" message="tns:ISCPP_HH_DesEnTarimar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/DesEnTarimarResponse" message="tns:ISCPP_HH_DesEnTarimar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportarTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ImportarTarima" message="tns:ISCPP_HH_ImportarTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ImportarTarimaResponse" message="tns:ISCPP_HH_ImportarTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTarima" message="tns:ISCPP_HH_ObtenerTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTarimaResponse" message="tns:ISCPP_HH_ObtenerTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezaEnTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezaEnTarima" message="tns:ISCPP_HH_ObtenerPiezaEnTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezaEnTarimaResponse" message="tns:ISCPP_HH_ObtenerPiezaEnTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EsValidaTarimaImportar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EsValidaTarimaImportar" message="tns:ISCPP_HH_EsValidaTarimaImportar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EsValidaTarimaImportarResponse" message="tns:ISCPP_HH_EsValidaTarimaImportar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnTarimadoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EnTarimadoPieza" message="tns:ISCPP_HH_EnTarimadoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EnTarimadoPiezaResponse" message="tns:ISCPP_HH_EnTarimadoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiempoEnMinutosCapturaColor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTiempoEnMinutosCapturaColor" message="tns:ISCPP_HH_ObtenerTiempoEnMinutosCapturaColor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTiempoEnMinutosCapturaColorResponse" message="tns:ISCPP_HH_ObtenerTiempoEnMinutosCapturaColor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncrementarContadorIntentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/IncrementarContadorIntentos" message="tns:ISCPP_HH_IncrementarContadorIntentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/IncrementarContadorIntentosResponse" message="tns:ISCPP_HH_IncrementarContadorIntentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReiniciarContadorIntentos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ReiniciarContadorIntentos" message="tns:ISCPP_HH_ReiniciarContadorIntentos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ReiniciarContadorIntentosResponse" message="tns:ISCPP_HH_ReiniciarContadorIntentos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarTarima" message="tns:ISCPP_HH_InsertarTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarTarimaResponse" message="tns:ISCPP_HH_InsertarTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezaInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezaInventario" message="tns:ISCPP_HH_ObtenerPiezaInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezaInventarioResponse" message="tns:ISCPP_HH_ObtenerPiezaInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaInventario" message="tns:ISCPP_HH_ActualizarPiezaInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaInventarioResponse" message="tns:ISCPP_HH_ActualizarPiezaInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaInventario" message="tns:ISCPP_HH_InsertarPiezaInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaInventarioResponse" message="tns:ISCPP_HH_InsertarPiezaInventario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaPiezaReemplazo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertaPiezaReemplazo" message="tns:ISCPP_HH_InsertaPiezaReemplazo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertaPiezaReemplazoResponse" message="tns:ISCPP_HH_InsertaPiezaReemplazo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteCambioEnProceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteCambioEnProceso" message="tns:ISCPP_HH_ExisteCambioEnProceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteCambioEnProcesoResponse" message="tns:ISCPP_HH_ExisteCambioEnProceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EnvioDT" message="tns:ISCPP_HH_EnvioDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EnvioDTResponse" message="tns:ISCPP_HH_EnvioDT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertaError">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertaError" message="tns:ISCPP_HH_InsertaError_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertaErrorResponse" message="tns:ISCPP_HH_InsertaError_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModelos2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModelos2" message="tns:ISCPP_HH_ObtenerModelos2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModelos2Response" message="tns:ISCPP_HH_ObtenerModelos2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarModeloPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarModeloPieza" message="tns:ISCPP_HH_ActualizarModeloPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarModeloPiezaResponse" message="tns:ISCPP_HH_ActualizarModeloPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCalidadPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarCalidadPieza" message="tns:ISCPP_HH_ActualizarCalidadPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarCalidadPiezaResponse" message="tns:ISCPP_HH_ActualizarCalidadPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDefectos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerDefectos" message="tns:ISCPP_HH_ObtenerDefectos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerDefectosResponse" message="tns:ISCPP_HH_ObtenerDefectos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerZonasDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerZonasDefecto" message="tns:ISCPP_HH_ObtenerZonasDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerZonasDefectoResponse" message="tns:ISCPP_HH_ObtenerZonasDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadosDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerEstadosDefecto" message="tns:ISCPP_HH_ObtenerEstadosDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerEstadosDefectoResponse" message="tns:ISCPP_HH_ObtenerEstadosDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalidades">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCalidades" message="tns:ISCPP_HH_ObtenerCalidades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCalidadesResponse" message="tns:ISCPP_HH_ObtenerCalidades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteModelo" message="tns:ISCPP_HH_ExisteModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteModeloResponse" message="tns:ISCPP_HH_ExisteModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDesProceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerDesProceso" message="tns:ISCPP_HH_ObtenerDesProceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerDesProcesoResponse" message="tns:ISCPP_HH_ObtenerDesProceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposModelo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTiposModelo" message="tns:ISCPP_HH_ObtenerTiposModelo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTiposModeloResponse" message="tns:ISCPP_HH_ObtenerTiposModelo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModelos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModelos" message="tns:ISCPP_HH_ObtenerModelos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModelosResponse" message="tns:ISCPP_HH_ObtenerModelos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteModeloHastaRevisado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteModeloHastaRevisado" message="tns:ISCPP_HH_ExisteModeloHastaRevisado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteModeloHastaRevisadoResponse" message="tns:ISCPP_HH_ExisteModeloHastaRevisado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteModeloDesdeEsmaltado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteModeloDesdeEsmaltado" message="tns:ISCPP_HH_ExisteModeloDesdeEsmaltado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteModeloDesdeEsmaltadoResponse" message="tns:ISCPP_HH_ExisteModeloDesdeEsmaltado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstaEnInventarioPocesoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EstaEnInventarioPocesoPieza" message="tns:ISCPP_HH_EstaEnInventarioPocesoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EstaEnInventarioPocesoPiezaResponse" message="tns:ISCPP_HH_EstaEnInventarioPocesoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModeloTipoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModeloTipoPieza" message="tns:ISCPP_HH_ObtenerModeloTipoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModeloTipoPiezaResponse" message="tns:ISCPP_HH_ObtenerModeloTipoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModeloTipoPieza2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModeloTipoPieza2" message="tns:ISCPP_HH_ObtenerModeloTipoPieza2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerModeloTipoPieza2Response" message="tns:ISCPP_HH_ObtenerModeloTipoPieza2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerColorPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerColorPieza" message="tns:ISCPP_HH_ObtenerColorPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerColorPiezaResponse" message="tns:ISCPP_HH_ObtenerColorPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarPieza" message="tns:ISCPP_HH_ValidarPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarPiezaResponse" message="tns:ISCPP_HH_ValidarPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTarimaPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarTarimaPieza" message="tns:ISCPP_HH_ValidarTarimaPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarTarimaPiezaResponse" message="tns:ISCPP_HH_ValidarTarimaPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTarimaPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/DeleteTarimaPieza" message="tns:ISCPP_HH_DeleteTarimaPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/DeleteTarimaPiezaResponse" message="tns:ISCPP_HH_DeleteTarimaPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EsCasetaTanque">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EsCasetaTanque" message="tns:ISCPP_HH_EsCasetaTanque_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EsCasetaTanqueResponse" message="tns:ISCPP_HH_EsCasetaTanque_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImprimirEtiqueta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ImprimirEtiqueta" message="tns:ISCPP_HH_ImprimirEtiqueta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ImprimirEtiquetaResponse" message="tns:ISCPP_HH_ImprimirEtiqueta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPieza" message="tns:ISCPP_HH_ObtenerPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezaResponse" message="tns:ISCPP_HH_ObtenerPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezasRequeme">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezasRequeme" message="tns:ISCPP_HH_ObtenerPiezasRequeme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezasRequemeResponse" message="tns:ISCPP_HH_ObtenerPiezasRequeme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchEsmaltadoPiezas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchEsmaltadoPiezas" message="tns:ISCPP_HH_ProcesarBatchEsmaltadoPiezas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchEsmaltadoPiezasResponse" message="tns:ISCPP_HH_ProcesarBatchEsmaltadoPiezas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchVaciadoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchVaciadoPieza" message="tns:ISCPP_HH_ProcesarBatchVaciadoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ProcesarBatchVaciadoPiezaResponse" message="tns:ISCPP_HH_ProcesarBatchVaciadoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActulizarUltimoProcesoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActulizarUltimoProcesoPieza" message="tns:ISCPP_HH_ActulizarUltimoProcesoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActulizarUltimoProcesoPiezaResponse" message="tns:ISCPP_HH_ActulizarUltimoProcesoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCarro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EliminarCarro" message="tns:ISCPP_HH_EliminarCarro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EliminarCarroResponse" message="tns:ISCPP_HH_EliminarCarro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarConfigHandHeld">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarConfigHandHeld" message="tns:ISCPP_HH_ActualizarConfigHandHeld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarConfigHandHeldResponse" message="tns:ISCPP_HH_ActualizarConfigHandHeld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCarroPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarCarroPieza" message="tns:ISCPP_HH_InsertarCarroPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarCarroPiezaResponse" message="tns:ISCPP_HH_InsertarCarroPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaTransaccionSecador">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaTransaccionSecador" message="tns:ISCPP_HH_InsertarPiezaTransaccionSecador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaTransaccionSecadorResponse" message="tns:ISCPP_HH_InsertarPiezaTransaccionSecador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarColorPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarColorPieza" message="tns:ISCPP_HH_ActualizarColorPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarColorPiezaResponse" message="tns:ISCPP_HH_ActualizarColorPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCarroZonaPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarCarroZonaPieza" message="tns:ISCPP_HH_InsertarCarroZonaPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarCarroZonaPiezaResponse" message="tns:ISCPP_HH_InsertarCarroZonaPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaDefecto" message="tns:ISCPP_HH_InsertarPiezaDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaDefectoResponse" message="tns:ISCPP_HH_InsertarPiezaDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPiezaDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EliminarPiezaDefecto" message="tns:ISCPP_HH_EliminarPiezaDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EliminarPiezaDefectoResponse" message="tns:ISCPP_HH_EliminarPiezaDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaDefecto" message="tns:ISCPP_HH_ActualizarPiezaDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaDefectoResponse" message="tns:ISCPP_HH_ActualizarPiezaDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaUltimoEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaUltimoEstado" message="tns:ISCPP_HH_ActualizarPiezaUltimoEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaUltimoEstadoResponse" message="tns:ISCPP_HH_ActualizarPiezaUltimoEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaAuditada">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaAuditada" message="tns:ISCPP_HH_ActualizarPiezaAuditada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarPiezaAuditadaResponse" message="tns:ISCPP_HH_ActualizarPiezaAuditada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezasTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezasTarima" message="tns:ISCPP_HH_ObtenerPiezasTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezasTarimaResponse" message="tns:ISCPP_HH_ObtenerPiezasTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RechazarTarimaPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/RechazarTarimaPieza" message="tns:ISCPP_HH_RechazarTarimaPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/RechazarTarimaPiezaResponse" message="tns:ISCPP_HH_RechazarTarimaPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTarimaPaletizado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarTarimaPaletizado" message="tns:ISCPP_HH_ActualizarTarimaPaletizado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarTarimaPaletizadoResponse" message="tns:ISCPP_HH_ActualizarTarimaPaletizado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistePiezaEnTarima">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ExistePiezaEnTarima" message="tns:ISCPP_HH_ExistePiezaEnTarima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ExistePiezaEnTarimaResponse" message="tns:ISCPP_HH_ExistePiezaEnTarima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTarimaPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarTarimaPieza" message="tns:ISCPP_HH_InsertarTarimaPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarTarimaPiezaResponse" message="tns:ISCPP_HH_InsertarTarimaPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEtiquetaReemplazo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarEtiquetaReemplazo" message="tns:ISCPP_HH_InsertarEtiquetaReemplazo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarEtiquetaReemplazoResponse" message="tns:ISCPP_HH_InsertarEtiquetaReemplazo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaDepuracionHistoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerFechaDepuracionHistoria" message="tns:ISCPP_HH_ObtenerFechaDepuracionHistoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerFechaDepuracionHistoriaResponse" message="tns:ISCPP_HH_ObtenerFechaDepuracionHistoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaDepuracionHistoria2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerFechaDepuracionHistoria2" message="tns:ISCPP_HH_ObtenerFechaDepuracionHistoria2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerFechaDepuracionHistoria2Response" message="tns:ISCPP_HH_ObtenerFechaDepuracionHistoria2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncServHH">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/SyncServHH" message="tns:ISCPP_HH_SyncServHH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/SyncServHHResponse" message="tns:ISCPP_HH_SyncServHH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCatalogos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarCatalogos" message="tns:ISCPP_HH_ActualizarCatalogos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarCatalogosResponse" message="tns:ISCPP_HH_ActualizarCatalogos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCatalogosPorPiezas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarCatalogosPorPiezas" message="tns:ISCPP_HH_ActualizarCatalogosPorPiezas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarCatalogosPorPiezasResponse" message="tns:ISCPP_HH_ActualizarCatalogosPorPiezas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTransacciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarTransacciones" message="tns:ISCPP_HH_ActualizarTransacciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarTransaccionesResponse" message="tns:ISCPP_HH_ActualizarTransacciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncServHHLDS">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/SyncServHHLDS" message="tns:ISCPP_HH_SyncServHHLDS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/SyncServHHLDSResponse" message="tns:ISCPP_HH_SyncServHHLDS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TablasCatalogosHH">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/TablasCatalogosHH" message="tns:ISCPP_HH_TablasCatalogosHH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/TablasCatalogosHHResponse" message="tns:ISCPP_HH_TablasCatalogosHH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TablasProcesoHH">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/TablasProcesoHH" message="tns:ISCPP_HH_TablasProcesoHH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/TablasProcesoHHResponse" message="tns:ISCPP_HH_TablasProcesoHH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncCarroPiezaIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncCarroPiezaIns" message="tns:ISCPP_HH_HHSyncCarroPiezaIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncCarroPiezaInsResponse" message="tns:ISCPP_HH_HHSyncCarroPiezaIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncCarroPiezaQuemadoIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncCarroPiezaQuemadoIns" message="tns:ISCPP_HH_HHSyncCarroPiezaQuemadoIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncCarroPiezaQuemadoInsResponse" message="tns:ISCPP_HH_HHSyncCarroPiezaQuemadoIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncConfigHandHeldIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncConfigHandHeldIns" message="tns:ISCPP_HH_HHSyncConfigHandHeldIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncConfigHandHeldInsResponse" message="tns:ISCPP_HH_HHSyncConfigHandHeldIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaIns" message="tns:ISCPP_HH_HHSyncPiezaIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaInsResponse" message="tns:ISCPP_HH_HHSyncPiezaIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaReemplazoIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaReemplazoIns" message="tns:ISCPP_HH_HHSyncPiezaReemplazoIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaReemplazoInsResponse" message="tns:ISCPP_HH_HHSyncPiezaReemplazoIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaDefectoIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaDefectoIns" message="tns:ISCPP_HH_HHSyncPiezaDefectoIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaDefectoInsResponse" message="tns:ISCPP_HH_HHSyncPiezaDefectoIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaTransaccionIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaTransaccionIns" message="tns:ISCPP_HH_HHSyncPiezaTransaccionIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaTransaccionInsResponse" message="tns:ISCPP_HH_HHSyncPiezaTransaccionIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaTransaccionSecadorIns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaTransaccionSecadorIns" message="tns:ISCPP_HH_HHSyncPiezaTransaccionSecadorIns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/HHSyncPiezaTransaccionSecadorInsResponse" message="tns:ISCPP_HH_HHSyncPiezaTransaccionSecadorIns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BloquearUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/BloquearUsuario" message="tns:ISCPP_HH_BloquearUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/BloquearUsuarioResponse" message="tns:ISCPP_HH_BloquearUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EstaServicioDisponible">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/EstaServicioDisponible" message="tns:ISCPP_HH_EstaServicioDisponible_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/EstaServicioDisponibleResponse" message="tns:ISCPP_HH_EstaServicioDisponible_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPlantas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPlantas" message="tns:ISCPP_HH_ObtenerPlantas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPlantasResponse" message="tns:ISCPP_HH_ObtenerPlantas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProcesos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProcesos" message="tns:ISCPP_HH_ObtenerProcesos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProcesosResponse" message="tns:ISCPP_HH_ObtenerProcesos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/Login" message="tns:ISCPP_HH_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/LoginResponse" message="tns:ISCPP_HH_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPlantasRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPlantasRol" message="tns:ISCPP_HH_ObtenerPlantasRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPlantasRolResponse" message="tns:ISCPP_HH_ObtenerPlantasRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProcesosPorRol">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProcesosPorRol" message="tns:ISCPP_HH_ObtenerProcesosPorRol_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProcesosPorRolResponse" message="tns:ISCPP_HH_ObtenerProcesosPorRol_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTurnos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTurnos" message="tns:ISCPP_HH_ObtenerTurnos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerTurnosResponse" message="tns:ISCPP_HH_ObtenerTurnos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProcesos2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProcesos2" message="tns:ISCPP_HH_ObtenerProcesos2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerProcesos2Response" message="tns:ISCPP_HH_ObtenerProcesos2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPantallasProceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPantallasProceso" message="tns:ISCPP_HH_ObtenerPantallasProceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPantallasProcesoResponse" message="tns:ISCPP_HH_ObtenerPantallasProceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarConfigHandHeld">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarConfigHandHeld" message="tns:ISCPP_HH_InsertarConfigHandHeld_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarConfigHandHeldResponse" message="tns:ISCPP_HH_InsertarConfigHandHeld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExisteInventarioProcesoActivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteInventarioProcesoActivo" message="tns:ISCPP_HH_ExisteInventarioProcesoActivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ExisteInventarioProcesoActivoResponse" message="tns:ISCPP_HH_ExisteInventarioProcesoActivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClaveEmpleadoMFG">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerClaveEmpleadoMFG" message="tns:ISCPP_HH_ObtenerClaveEmpleadoMFG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerClaveEmpleadoMFGResponse" message="tns:ISCPP_HH_ObtenerClaveEmpleadoMFG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSupervisorPorDefecto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerSupervisorPorDefecto" message="tns:ISCPP_HH_ObtenerSupervisorPorDefecto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerSupervisorPorDefectoResponse" message="tns:ISCPP_HH_ObtenerSupervisorPorDefecto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEmpleadoMFG">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarEmpleadoMFG" message="tns:ISCPP_HH_ValidarEmpleadoMFG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ValidarEmpleadoMFGResponse" message="tns:ISCPP_HH_ValidarEmpleadoMFG_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCentrosTrabajo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCentrosTrabajo" message="tns:ISCPP_HH_ObtenerCentrosTrabajo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCentrosTrabajoResponse" message="tns:ISCPP_HH_ObtenerCentrosTrabajo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaquinas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerMaquinas" message="tns:ISCPP_HH_ObtenerMaquinas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerMaquinasResponse" message="tns:ISCPP_HH_ObtenerMaquinas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPosicionesBanco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPosicionesBanco" message="tns:ISCPP_HH_ObtenerPosicionesBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPosicionesBancoResponse" message="tns:ISCPP_HH_ObtenerPosicionesBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosMolde">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerArticulosMolde" message="tns:ISCPP_HH_ObtenerArticulosMolde_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerArticulosMoldeResponse" message="tns:ISCPP_HH_ObtenerArticulosMolde_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerColores">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerColores" message="tns:ISCPP_HH_ObtenerColores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerColoresResponse" message="tns:ISCPP_HH_ObtenerColores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPruebas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPruebas" message="tns:ISCPP_HH_ObtenerPruebas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPruebasResponse" message="tns:ISCPP_HH_ObtenerPruebas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezaCarroHornos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezaCarroHornos" message="tns:ISCPP_HH_ObtenerPiezaCarroHornos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezaCarroHornosResponse" message="tns:ISCPP_HH_ObtenerPiezaCarroHornos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVaciadasAcumuladas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarVaciadasAcumuladas" message="tns:ISCPP_HH_ActualizarVaciadasAcumuladas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarVaciadasAcumuladasResponse" message="tns:ISCPP_HH_ActualizarVaciadasAcumuladas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNumPosicionesBanco">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerNumPosicionesBanco" message="tns:ISCPP_HH_ObtenerNumPosicionesBanco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerNumPosicionesBancoResponse" message="tns:ISCPP_HH_ObtenerNumPosicionesBanco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuperoLimiteVaciadas">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/SuperoLimiteVaciadas" message="tns:ISCPP_HH_SuperoLimiteVaciadas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/SuperoLimiteVaciadasResponse" message="tns:ISCPP_HH_SuperoLimiteVaciadas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVaciadasAcumuladas2">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarVaciadasAcumuladas2" message="tns:ISCPP_HH_ActualizarVaciadasAcumuladas2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ActualizarVaciadasAcumuladas2Response" message="tns:ISCPP_HH_ActualizarVaciadasAcumuladas2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodPiezaCodBarras">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCodPiezaCodBarras" message="tns:ISCPP_HH_ObtenerCodPiezaCodBarras_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCodPiezaCodBarrasResponse" message="tns:ISCPP_HH_ObtenerCodPiezaCodBarras_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerEstadoPieza" message="tns:ISCPP_HH_ObtenerEstadoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerEstadoPiezaResponse" message="tns:ISCPP_HH_ObtenerEstadoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimoProcesoPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerUltimoProcesoPieza" message="tns:ISCPP_HH_ObtenerUltimoProcesoPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerUltimoProcesoPiezaResponse" message="tns:ISCPP_HH_ObtenerUltimoProcesoPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezasCarro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezasCarro" message="tns:ISCPP_HH_ObtenerPiezasCarro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerPiezasCarroResponse" message="tns:ISCPP_HH_ObtenerPiezasCarro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodModeloPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCodModeloPieza" message="tns:ISCPP_HH_ObtenerCodModeloPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCodModeloPiezaResponse" message="tns:ISCPP_HH_ObtenerCodModeloPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistePiezaEnCarro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ExistePiezaEnCarro" message="tns:ISCPP_HH_ExistePiezaEnCarro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ExistePiezaEnCarroResponse" message="tns:ISCPP_HH_ExistePiezaEnCarro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalidadPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCalidadPieza" message="tns:ISCPP_HH_ObtenerCalidadPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCalidadPiezaResponse" message="tns:ISCPP_HH_ObtenerCalidadPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodMoldePieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCodMoldePieza" message="tns:ISCPP_HH_ObtenerCodMoldePieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerCodMoldePiezaResponse" message="tns:ISCPP_HH_ObtenerCodMoldePieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDefectosPiezaProceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerDefectosPiezaProceso" message="tns:ISCPP_HH_ObtenerDefectosPiezaProceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/ObtenerDefectosPiezaProcesoResponse" message="tns:ISCPP_HH_ObtenerDefectosPiezaProceso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPieza">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPieza" message="tns:ISCPP_HH_InsertarPieza_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaResponse" message="tns:ISCPP_HH_InsertarPieza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaTransaccion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaTransaccion" message="tns:ISCPP_HH_InsertarPiezaTransaccion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISCPP_HH/InsertarPiezaTransaccionResponse" message="tns:ISCPP_HH_InsertarPiezaTransaccion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISCPP_HH" type="tns:ISCPP_HH">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcesarBatchSecadoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ProcesarBatchSecadoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaServidor">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerFechaServidor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchRevisadoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ProcesarBatchRevisadoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchHornosPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ProcesarBatchHornosPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerConfigBancoCasetaTanque">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerConfigBancoCasetaTanque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerOperador">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerOperador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/LogIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTipoArticuloPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerTipoArticuloPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerKardexPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerKardexPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCarrosPendientesSecador">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCarrosPendientesSecador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCarrosPendientesSecadorDetalle">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCarrosPendientesSecadorDetalle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProduccion">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerProduccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMensajeInicioSesion">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerMensajeInicioSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPoliticaContrasena">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ValidarPoliticaContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarPassword">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/CambiarPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HabilitarImpresionEtiqueta">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HabilitarImpresionEtiqueta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TienePermisoReImpresion">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/TienePermisoReImpresion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CerrarTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/CerrarTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnTarimarPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EnTarimarPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarimaPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerTarimaPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsTarimaValida">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EsTarimaValida" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AbrirTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/AbrirTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesEnTarimar">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/DesEnTarimar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportarTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ImportarTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezaEnTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPiezaEnTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsValidaTarimaImportar">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EsValidaTarimaImportar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnTarimadoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EnTarimadoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiempoEnMinutosCapturaColor">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerTiempoEnMinutosCapturaColor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncrementarContadorIntentos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/IncrementarContadorIntentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReiniciarContadorIntentos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ReiniciarContadorIntentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezaInventario">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPiezaInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaInventario">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarPiezaInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaInventario">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarPiezaInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaPiezaReemplazo">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertaPiezaReemplazo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteCambioEnProceso">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ExisteCambioEnProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioDT">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EnvioDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertaError">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertaError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModelos2">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerModelos2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarModeloPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarModeloPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCalidadPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarCalidadPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDefectos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerDefectos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerZonasDefecto">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerZonasDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadosDefecto">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerEstadosDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalidades">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCalidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteModelo">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ExisteModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDesProceso">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerDesProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTiposModelo">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerTiposModelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModelos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerModelos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteModeloHastaRevisado">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ExisteModeloHastaRevisado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteModeloDesdeEsmaltado">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ExisteModeloDesdeEsmaltado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstaEnInventarioPocesoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EstaEnInventarioPocesoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModeloTipoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerModeloTipoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerModeloTipoPieza2">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerModeloTipoPieza2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerColorPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerColorPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ValidarPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarTarimaPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ValidarTarimaPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTarimaPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/DeleteTarimaPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EsCasetaTanque">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EsCasetaTanque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImprimirEtiqueta">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ImprimirEtiqueta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezasRequeme">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPiezasRequeme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchEsmaltadoPiezas">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ProcesarBatchEsmaltadoPiezas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcesarBatchVaciadoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ProcesarBatchVaciadoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActulizarUltimoProcesoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActulizarUltimoProcesoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCarro">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EliminarCarro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarConfigHandHeld">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarConfigHandHeld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCarroPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarCarroPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaTransaccionSecador">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarPiezaTransaccionSecador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarColorPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarColorPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCarroZonaPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarCarroZonaPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaDefecto">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarPiezaDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarPiezaDefecto">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EliminarPiezaDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaDefecto">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarPiezaDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaUltimoEstado">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarPiezaUltimoEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPiezaAuditada">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarPiezaAuditada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezasTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPiezasTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RechazarTarimaPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/RechazarTarimaPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTarimaPaletizado">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarTarimaPaletizado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePiezaEnTarima">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ExistePiezaEnTarima" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTarimaPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarTarimaPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarEtiquetaReemplazo">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarEtiquetaReemplazo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaDepuracionHistoria">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerFechaDepuracionHistoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerFechaDepuracionHistoria2">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerFechaDepuracionHistoria2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncServHH">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/SyncServHH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCatalogos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarCatalogos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCatalogosPorPiezas">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarCatalogosPorPiezas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTransacciones">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarTransacciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncServHHLDS">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/SyncServHHLDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TablasCatalogosHH">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/TablasCatalogosHH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TablasProcesoHH">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/TablasProcesoHH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncCarroPiezaIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncCarroPiezaIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncCarroPiezaQuemadoIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncCarroPiezaQuemadoIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncConfigHandHeldIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncConfigHandHeldIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncPiezaIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaReemplazoIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncPiezaReemplazoIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaDefectoIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncPiezaDefectoIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaTransaccionIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncPiezaTransaccionIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HHSyncPiezaTransaccionSecadorIns">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/HHSyncPiezaTransaccionSecadorIns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BloquearUsuario">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/BloquearUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EstaServicioDisponible">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/EstaServicioDisponible" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPlantas">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPlantas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProcesos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerProcesos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPlantasRol">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPlantasRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProcesosPorRol">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerProcesosPorRol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTurnos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerTurnos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerProcesos2">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerProcesos2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPantallasProceso">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPantallasProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarConfigHandHeld">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarConfigHandHeld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExisteInventarioProcesoActivo">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ExisteInventarioProcesoActivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerClaveEmpleadoMFG">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerClaveEmpleadoMFG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSupervisorPorDefecto">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerSupervisorPorDefecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEmpleadoMFG">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ValidarEmpleadoMFG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCentrosTrabajo">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCentrosTrabajo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerMaquinas">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerMaquinas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPosicionesBanco">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPosicionesBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerArticulosMolde">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerArticulosMolde" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerColores">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerColores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPruebas">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPruebas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezaCarroHornos">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPiezaCarroHornos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVaciadasAcumuladas">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarVaciadasAcumuladas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerNumPosicionesBanco">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerNumPosicionesBanco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SuperoLimiteVaciadas">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/SuperoLimiteVaciadas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarVaciadasAcumuladas2">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ActualizarVaciadasAcumuladas2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodPiezaCodBarras">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCodPiezaCodBarras" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerEstadoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerEstadoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUltimoProcesoPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerUltimoProcesoPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPiezasCarro">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerPiezasCarro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodModeloPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCodModeloPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistePiezaEnCarro">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ExistePiezaEnCarro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCalidadPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCalidadPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCodMoldePieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerCodMoldePieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDefectosPiezaProceso">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/ObtenerDefectosPiezaProceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPieza">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarPieza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPiezaTransaccion">
+      <soap:operation soapAction="http://tempuri.org/ISCPP_HH/InsertarPiezaTransaccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SCPP_HH">
+    <wsdl:port name="BasicHttpBinding_ISCPP_HH" binding="tns:BasicHttpBinding_ISCPP_HH">
+      <soap:address location="http://cpsasa.sasant/SCPPSERVICESHH/SCPPHHService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

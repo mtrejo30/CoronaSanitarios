@@ -1,0 +1,51 @@
+<publishData>
+  <publishTarget publishUrl="http://localhost/scppservice">
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.dll.config" publishTime="07/12/2011 08:55:48" />
+    <file relUrl="Web.config" publishTime="07/12/2011 08:55:48" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.pdb" publishTime="11/07/2011 17:10:46" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessComponent.pdb" publishTime="11/07/2011 17:10:39" />
+    <file relUrl="bin/Lamosa.SCPP.Common.pdb" publishTime="07/27/2011 12:23:11" />
+    <file relUrl="LAMOSA.SCPP.Server.Service.SCPP.svc" publishTime="11/07/2011 17:39:47" />
+    <file relUrl="bin/Lamosa.SCPP.Common.Utileria.dll" publishTime="07/27/2011 12:23:17" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessComponent.dll" publishTime="11/07/2011 17:10:39" />
+    <file relUrl="bin/Lamosa.SCPP.Common.dll" publishTime="07/27/2011 12:23:11" />
+    <file relUrl="bin/Lamosa.SCPP.Common.Utileria.pdb" publishTime="07/27/2011 12:23:17" />
+    <file relUrl="bin/Common.DataAccess.dll" publishTime="11/07/2011 17:07:32" />
+    <file relUrl="bin/Common.DataAccess.pdb" publishTime="11/07/2011 17:07:32" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.dll" publishTime="11/07/2011 17:10:46" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessEntity.dll" publishTime="11/07/2011 17:10:38" />
+    <file relUrl="bin/Common.SolutionEntityFramework.dll" publishTime="07/27/2011 10:41:28" />
+    <file relUrl="bin/Common.SolutionEntityFramework.pdb" publishTime="07/27/2011 10:41:27" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessEntity.pdb" publishTime="11/07/2011 17:10:38" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost/csppservice">
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessEntity.pdb" publishTime="02/18/2011 05:11:18" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.dll" publishTime="02/18/2011 05:11:20" />
+    <file relUrl="bin/Common.DataAccess.dll" publishTime="02/18/2011 05:11:18" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessEntity.dll" publishTime="02/18/2011 05:11:19" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessComponent.dll" publishTime="02/18/2011 05:11:20" />
+    <file relUrl="LAMOSA.SCPP.Server.Service.SCPP.svc" publishTime="02/18/2011 05:22:36" />
+    <file relUrl="Web.config" publishTime="01/10/2011 12:44:10" />
+    <file relUrl="bin/Common.SolutionEntityFramework.dll" publishTime="02/18/2011 05:11:17" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.dll.config" publishTime="01/10/2011 12:44:10" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessComponent.pdb" publishTime="02/18/2011 05:11:19" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.pdb" publishTime="02/18/2011 05:11:20" />
+    <file relUrl="bin/Common.SolutionEntityFramework.pdb" publishTime="02/18/2011 05:11:17" />
+    <file relUrl="bin/Common.DataAccess.pdb" publishTime="02/18/2011 05:11:18" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.Service\App_Code\">
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessEntity.pdb" publishTime="12/08/2010 15:26:33" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.dll" publishTime="12/09/2010 17:55:29" />
+    <file relUrl="bin/Common.DataAccess.dll" publishTime="12/07/2010 18:52:15" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessEntity.dll" publishTime="12/08/2010 15:26:33" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessComponent.dll" publishTime="12/08/2010 16:38:34" />
+    <file relUrl="LAMOSA.SCPP.Server.Service.SCPP.svc" publishTime="12/09/2010 17:55:29" />
+    <file relUrl="Web.config" publishTime="11/19/2010 18:29:35" />
+    <file relUrl="bin/Common.SolutionEntityFramework.dll" publishTime="12/07/2010 18:52:14" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.dll.config" publishTime="11/19/2010 18:29:35" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.BusinessComponent.pdb" publishTime="12/08/2010 16:38:34" />
+    <file relUrl="bin/LAMOSA.SCPP.Server.Service.pdb" publishTime="12/09/2010 17:55:29" />
+    <file relUrl="bin/Common.SolutionEntityFramework.pdb" publishTime="12/07/2010 18:52:14" />
+    <file relUrl="bin/Common.DataAccess.pdb" publishTime="12/07/2010 18:52:14" />
+  </publishTarget>
+</publishData>

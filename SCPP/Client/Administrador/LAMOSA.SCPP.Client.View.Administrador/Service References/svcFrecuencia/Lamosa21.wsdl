@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="Lamosa.SCPP.ServiceManager.Interfaces" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="Lamosa.SCPP.ServiceManager.Interfaces" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="Lamosa.SCPP.ServiceManager.Interfaces/Imports">
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd2" namespace="Lamosa.SCPP.ServiceManager.Interfaces" />
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd1" namespace="Lamosa.SCPP.Common.Entities.ClassImpl" />
+      <xsd:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFrecuenciaServiceManager_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IFrecuenciaServiceManager_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFrecuenciaServiceManager">
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IFrecuenciaServiceManager/Obtener" message="tns:IFrecuenciaServiceManager_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="Lamosa.SCPP.ServiceManager.Interfaces/IFrecuenciaServiceManager/ObtenerResponse" message="tns:IFrecuenciaServiceManager_Obtener_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

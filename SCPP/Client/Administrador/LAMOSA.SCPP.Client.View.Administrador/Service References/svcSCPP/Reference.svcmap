@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5c883b57-7d02-4bdf-a544-d41f1cf8c6f1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LAMOSA3.xsd" MetadataType="Schema" ID="f5b3c32b-1a72-4c57-9154-524fbc5cef9b" SourceId="1" SourceUrl="http://villa.sasant/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc?xsd=xsd0" />
+    <MetadataFile FileName="LAMOSA4.xsd" MetadataType="Schema" ID="2478febd-a97f-4c45-9f20-e1487d9479ba" SourceId="1" SourceUrl="http://villa.sasant/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc?xsd=xsd1" />
+    <MetadataFile FileName="LAMOSA5.xsd" MetadataType="Schema" ID="5d602b3a-71c3-4c8b-979d-ad9c2619cf0c" SourceId="1" SourceUrl="http://villa.sasant/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc?xsd=xsd2" />
+    <MetadataFile FileName="SCPP1.wsdl" MetadataType="Wsdl" ID="8febb629-4922-4900-9b5d-1acde06a0525" SourceId="1" SourceUrl="http://villa.sasant/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc?wsdl" />
+    <MetadataFile FileName="LAMOSA6.xsd" MetadataType="Schema" ID="ba7935f4-f3c4-4ca9-806d-5d638c7d7911" SourceId="1" SourceUrl="http://villa.sasant/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc?xsd=xsd4" />
+    <MetadataFile FileName="LAMOSA1.disco" MetadataType="Disco" ID="d8d142c8-82e1-45cf-90d0-4fc6b772f55b" SourceId="1" SourceUrl="http://villa.sasant/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc?disco" />
+    <MetadataFile FileName="LAMOSA7.xsd" MetadataType="Schema" ID="3e9a3d46-ddaf-4c84-b877-815ad1748b94" SourceId="1" SourceUrl="http://villa.sasant/scppservice/LAMOSA.SCPP.Server.Service.SCPP.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Lamosa.SCPP.ServiceManager.Interfaces" elementFormDefault="qualified" targetNamespace="Lamosa.SCPP.ServiceManager.Interfaces" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.CapacidadProduccionServiceManager.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="ObtenerCapacidadProduccion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cpCapacidadProduccion" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCapacidadProduccionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ObtenerCapacidadProduccionResult" nillable="true" type="q1:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvanceAcumulado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="aaAvanceAcumulado" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAvanceAcumuladoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ObtenerAvanceAcumuladoResult" nillable="true" type="q2:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

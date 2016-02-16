@@ -1,0 +1,77 @@
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a00_CargaDatos.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_CapturaCodigoBarras.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_ConsultarPieza.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a01_Login.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a02_SeleccionPlanta.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a03_ConfiguracionInicial.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_CapturaInicial.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a05_CapturaVaciado.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_Defectos.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a05_ArmadoCarroSecador.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a06_EntradaCarroSecador.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.Properties.Resources.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a07_CapturaRevisado.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a08_CapturaEsmaltado.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a09_CapturaHornos.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a11_ArmadoTarima.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a11_CapturaEmpaque.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a12_CapturaAuditoria.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a13_CapturaInventario.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a13_PiezaNuevaInventario.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a14_ReemplazoEtiqueta.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.CambioPassword.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmBienvenida.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmCarroPendienteSecador.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmCarroPendienteSecadorDetalle.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.frmConsultaProduccionUsuario.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.frmKardex.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmProduccionOperador.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.Encabezado.resources
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.csproj.GenerateResource.Cache
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\DataAccess\lamosa.sdf
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\LAMOSA.SCPP.Client.View.HandHeld.exe
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\LAMOSA.SCPP.Client.View.HandHeld.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\System.Data.SqlServerCe.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.exe
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmAutorizacionImpresion.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\DataAccess\lamosa.sdf
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\LAMOSA.SCPP.Client.View.HandHeld.exe
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\LAMOSA.SCPP.Client.View.HandHeld.pdb
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\ResolveAssemblyReference.cache
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a00_CargaDatos.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_CapturaCodigoBarras.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_ConsultarPieza.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a01_Login.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a02_SeleccionPlanta.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a03_ConfiguracionInicial.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_CapturaInicial.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a05_CapturaVaciado.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a04_Defectos.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a05_ArmadoCarroSecador.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a06_EntradaCarroSecador.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.Properties.Resources.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a07_CapturaRevisado.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a08_CapturaEsmaltado.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a09_CapturaHornos.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a11_ArmadoTarima.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a11_CapturaEmpaque.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a12_CapturaAuditoria.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a13_CapturaInventario.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a13_PiezaNuevaInventario.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.a14_ReemplazoEtiqueta.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.CambioPassword.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmAutorizacionImpresion.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmBienvenida.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmCarroPendienteSecador.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmCarroPendienteSecadorDetalle.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.frmConsultaProduccionUsuario.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.frmKardex.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmProduccionOperador.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.Encabezado.resources
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.csproj.GenerateResource.Cache
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.exe
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.pdb
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\bin\Debug\System.Data.SqlServerCe.dll
+C:\Desarrollo\Lamosa\SCPP\Client\HandHeld\LAMOSA.SCPP.Client.View.HandHeld\obj\Debug\LAMOSA.SCPP.Client.View.HandHeld.User_Interface.frmSetTarimaPieza.resources

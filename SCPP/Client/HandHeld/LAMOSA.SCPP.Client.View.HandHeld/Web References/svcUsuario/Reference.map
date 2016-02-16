@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SVCSCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManagerWM.svc?xsd=xsd2" filename="Lamosa.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://cpsasa.sasant/SVCSCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManagerWM.svc?wsdl" filename="UsuarioServiceManagerWM.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://cpsasa.sasant/SVCSCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManagerWM.svc?disco" filename="Lamosa.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SVCSCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManagerWM.svc?xsd=xsd1" filename="Lamosa0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://cpsasa.sasant/SVCSCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManagerWM.svc?wsdl=wsdl1" filename="Lamosa.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://cpsasa.sasant/SVCSCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManagerWM.svc?xsd=xsd0" filename="Lamosa1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://cpsasa.sasant/SVCSCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManagerWM.svc?wsdl=wsdl0" filename="Lamosa0.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

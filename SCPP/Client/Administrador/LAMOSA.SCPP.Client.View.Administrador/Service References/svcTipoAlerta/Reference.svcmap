@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="05486574-a546-4bdb-954c-742f48390c6c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Lamosa.disco" MetadataType="Disco" ID="1b187d34-e3ca-4f0b-b953-f2def81569b2" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?disco" />
+    <MetadataFile FileName="Lamosa.wsdl" MetadataType="Wsdl" ID="e79d8a7e-6c39-41ed-aeac-256994c690d3" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="Lamosa1.wsdl" MetadataType="Wsdl" ID="31d27602-2133-4c32-9dc8-dc885e196a2c" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="Lamosa.xsd" MetadataType="Schema" ID="9bf0ebf8-42b9-4ebd-a62b-a65f93bc4c0a" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?xsd=xsd0" />
+    <MetadataFile FileName="TipoAlertaServiceManager.wsdl" MetadataType="Wsdl" ID="006b0fa8-e327-4209-b9d5-f8b4a8f810a6" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?wsdl" />
+    <MetadataFile FileName="Lamosa1.xsd" MetadataType="Schema" ID="ea0adffd-5bf9-4d0c-bb02-a0442904c6f2" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?xsd=xsd1" />
+    <MetadataFile FileName="Lamosa2.xsd" MetadataType="Schema" ID="48b176a6-c50d-40e3-bead-30295fe66731" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?xsd=xsd2" />
+    <MetadataFile FileName="Lamosa3.xsd" MetadataType="Schema" ID="426a672f-6442-4625-894d-5f4cd5af50d4" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.TipoAlertaServiceManager.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

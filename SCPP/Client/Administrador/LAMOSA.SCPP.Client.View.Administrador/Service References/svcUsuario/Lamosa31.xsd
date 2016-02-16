@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Lamosa.SCPP.ServiceManager.Interfaces" elementFormDefault="qualified" targetNamespace="Lamosa.SCPP.ServiceManager.Interfaces" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Loguear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uUsuario" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoguearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoguearResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Desloguear">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uUsuario" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DesloguearResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DesloguearResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarPassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uUsuario" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarPasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CambiarPasswordResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSesion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="uUsuario" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSesionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSesionResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

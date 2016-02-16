@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{152460F3-5EAA-435C-A4CD-2B60A0344A8F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LAMOSA.SCPP.Server.BusinessEntity</RootNamespace>
+    <AssemblyName>LAMOSA.SCPP.Server.BusinessEntity</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accion.cs" />
+    <Compile Include="Almacen.cs" />
+    <Compile Include="Area.cs" />
+    <Compile Include="Articulo.cs" />
+    <Compile Include="ArticuloCbo.cs" />
+    <Compile Include="ArticuloPars.cs" />
+    <Compile Include="Calidad.cs" />
+    <Compile Include="Campo.cs" />
+    <Compile Include="CentroTrabajo.cs" />
+    <Compile Include="Clasificacion.cs" />
+    <Compile Include="CodigoBarra.cs" />
+    <Compile Include="Color.cs" />
+    <Compile Include="CondicionEsmalte.cs" />
+    <Compile Include="CondicionEsmalteAutoriza.cs" />
+    <Compile Include="CondicionOperacion.cs" />
+    <Compile Include="CondicionOperacionAutoriza.cs" />
+    <Compile Include="CondicionPasta.cs" />
+    <Compile Include="CondicionPastaAutoriza.cs" />
+    <Compile Include="ConfigBancoDetalle.cs" />
+    <Compile Include="ConfigBancoRegistro.cs" />
+    <Compile Include="ConfigBancos.cs" />
+    <Compile Include="ConfigEtiquetaEmpaque.cs" />
+    <Compile Include="ConfigImpresora.cs" />
+    <Compile Include="Configuracion.cs" />
+    <Compile Include="ContrasenaC.cs" />
+    <Compile Include="ContrasenaL.cs" />
+    <Compile Include="Defecto.cs" />
+    <Compile Include="DefectoCbo.cs" />
+    <Compile Include="DefectoPieza.cs" />
+    <Compile Include="DistribucionCodBarras.cs" />
+    <Compile Include="Empleado.cs" />
+    <Compile Include="EmpleadoBusqueda.cs" />
+    <Compile Include="Enums\TipoEtiqueta.cs" />
+    <Compile Include="EstructuraPlanta.cs" />
+    <Compile Include="Etiqueta.cs" />
+    <Compile Include="ExcedenteCodBarras.cs" />
+    <Compile Include="CondicionOperacionGuarda.cs" />
+    <Compile Include="HandHeld\HHCalidad.cs" />
+    <Compile Include="HandHeld\HHCarro.cs" />
+    <Compile Include="HandHeld\HHColor.cs" />
+    <Compile Include="HandHeld\HHDefecto.cs" />
+    <Compile Include="HandHeld\HHEstadoPieza.cs" />
+    <Compile Include="HandHeld\HHEtiqueta.cs" />
+    <Compile Include="HandHeld\HHModelo.cs" />
+    <Compile Include="HandHeld\HHMolde.cs" />
+    <Compile Include="HandHeld\HHPieza.cs" />
+    <Compile Include="HandHeld\HHProceso.cs" />
+    <Compile Include="HandHeld\HHTarimaPieza.cs" />
+    <Compile Include="HandHeld\HHValidarPieza.cs" />
+    <Compile Include="Imagen.cs" />
+    <Compile Include="Inventario.cs" />
+    <Compile Include="InventarioEnProceso.cs" />
+    <Compile Include="KardexProducto.cs" />
+    <Compile Include="KardexProductoBusqueda.cs" />
+    <Compile Include="KardexProductoDefecto.cs" />
+    <Compile Include="LocalizacionDefecto.cs" />
+    <Compile Include="LoginUsuario.cs" />
+    <Compile Include="Maquina.cs" />
+    <Compile Include="MaquinaCbo.cs" />
+    <Compile Include="MetasProd.cs" />
+    <Compile Include="Molde.cs" />
+    <Compile Include="MoldeCbo.cs" />
+    <Compile Include="Pieza.cs" />
+    <Compile Include="PiezaReemplazo.cs" />
+    <Compile Include="Planta.cs" />
+    <Compile Include="PlantaCalidad.cs" />
+    <Compile Include="PlantaCbo.cs" />
+    <Compile Include="Proceso.cs" />
+    <Compile Include="ProcesoCbo.cs" />
+    <Compile Include="Prueba.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Puesto.cs" />
+    <Compile Include="RepCapInstalada.cs" />
+    <Compile Include="Rol.cs" />
+    <Compile Include="rolplanta.cs" />
+    <Compile Include="RutaProceso.cs" />
+    <Compile Include="ScreenPermission.cs" />
+    <Compile Include="Server\Actions.cs" />
+    <Compile Include="Server\CodigoBarras.cs" />
+    <Compile Include="Server\CodigoReemplazo.cs" />
+    <Compile Include="Server\Combos.cs" />
+    <Compile Include="Server\ConnectionLamosa.cs" />
+    <Compile Include="Server\Inventarios.cs" />
+    <Compile Include="Server\ReportesB.cs" />
+    <Compile Include="Server\LoginU.cs" />
+    <Compile Include="TextoEmpaque.cs" />
+    <Compile Include="TipoArticuloCbo.cs" />
+    <Compile Include="TipoDefecto.cs" />
+    <Compile Include="Turno.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="Zona.cs" />
+    <Compile Include="ZonaDefecto.cs" />
+    <Compile Include="ZonaDefectoCbo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Common\SolutionEntityFramework\Common.SolutionEntityFramework\Common.SolutionEntityFramework.csproj">
+      <Project>{01D17490-AC90-49F9-AA2B-1A572268121C}</Project>
+      <Name>Common.SolutionEntityFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

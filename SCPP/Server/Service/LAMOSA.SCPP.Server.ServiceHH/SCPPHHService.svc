@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Service="LAMOSA.SCPP.Server.ServiceHH.SCPP_HH" %>
+
+<%@ Assembly Name="LAMOSA.SCPP.Server.ServiceHH" %>

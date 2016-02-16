@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="Lamosa.SCPP.Common.Entities.ClassImpl" elementFormDefault="qualified" targetNamespace="Lamosa.SCPP.Common.Entities.ClassImpl" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Password">
+    <xs:sequence>
+      <xs:element name="Clave" nillable="true" type="xs:string" />
+      <xs:element name="FechaValidaFinal" type="xs:dateTime" />
+      <xs:element name="FechaValidaInicial" type="xs:dateTime" />
+      <xs:element name="Intentos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Password" nillable="true" type="tns:Password" />
+  <xs:complexType name="Usuario">
+    <xs:sequence>
+      <xs:element name="Clave" nillable="true" type="xs:string" />
+      <xs:element name="Codigo" type="xs:int" />
+      <xs:element name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element name="Empleado" nillable="true" type="xs:anyType" />
+      <xs:element name="Nombre" nillable="true" type="xs:string" />
+      <xs:element name="Password" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Usuario" nillable="true" type="tns:Usuario" />
+  <xs:complexType name="Sesion">
+    <xs:sequence>
+      <xs:element name="Codigo" type="xs:int" />
+      <xs:element name="Estado" type="xs:boolean" />
+      <xs:element name="FechaFin" type="xs:dateTime" />
+      <xs:element name="FechaInicio" type="xs:dateTime" />
+      <xs:element name="Usuario" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Sesion" nillable="true" type="tns:Sesion" />
+  <xs:complexType name="Empleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Empleado" nillable="true" type="tns:Empleado" />
+</xs:schema>

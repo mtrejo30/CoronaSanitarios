@@ -1,0 +1,1073 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="" namespace="http://LAMOSA/SCPP/BE" />
+  <xs:element name="EliminaConfigBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://LAMOSA/SCPP/BE" minOccurs="0" name="CB" nillable="true" type="q1:ConfigBancos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaConfigBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://LAMOSA/SCPP/BE" minOccurs="0" name="EliminaConfigBancoResult" nillable="true" type="q2:ConfigBancos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://LAMOSA/SCPP/BE" minOccurs="0" name="U" nillable="true" type="q3:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://LAMOSA/SCPP/BE" minOccurs="0" name="EliminaUsuarioResult" nillable="true" type="q4:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaTurno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codTurno" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaTurnoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codRol" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRolResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaPrueba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodPrueba" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaPruebaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaConfigBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://LAMOSA/SCPP/BE" minOccurs="0" name="AU" nillable="true" type="q5:ConfigBancos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaConfigBancoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaCondicionEsmalte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://LAMOSA/SCPP/BE" minOccurs="0" name="AC" nillable="true" type="q6:CondicionEsmalteAutoriza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaCondicionEsmalteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaCondicionPasta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://LAMOSA/SCPP/BE" minOccurs="0" name="AC" nillable="true" type="q7:CondicionPastaAutoriza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaCondicionPastaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaCondicionOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://LAMOSA/SCPP/BE" minOccurs="0" name="AC" nillable="true" type="q8:CondicionOperacionAutoriza" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AutorizaCondicionOperacionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCodigoBarras">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="planta" type="xs:int" />
+        <xs:element minOccurs="0" name="centroTrabajo" type="xs:int" />
+        <xs:element minOccurs="0" name="banco" type="xs:int" />
+        <xs:element minOccurs="0" name="empleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCodigoBarrasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCodigoBarrasResult" nillable="true" type="q9:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://LAMOSA/SCPP/BE" minOccurs="0" name="Contrasena" nillable="true" type="q10:ContrasenaC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://LAMOSA/SCPP/BE" minOccurs="0" name="CambiarContrasenaResult" nillable="true" type="q11:ContrasenaC" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContrasenaLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://LAMOSA/SCPP/BE" minOccurs="0" name="Contrasena" nillable="true" type="q12:ContrasenaL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContrasenaLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://LAMOSA/SCPP/BE" minOccurs="0" name="CambiarContrasenaLoginResult" nillable="true" type="q13:ContrasenaL" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInfoDashboard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="iCodPlanta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInfoDashboardResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerInfoDashboardResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuarios">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Planta" type="xs:int" />
+        <xs:element minOccurs="0" name="Rol" type="xs:int" />
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerUsuariosResult" nillable="true" type="q14:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadoBusqueda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEmpleado" type="xs:int" />
+        <xs:element minOccurs="0" name="NombreEmpleado" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rol" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadoBusquedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerEmpleadoBusquedaResult" nillable="true" type="q15:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMFGEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodEmpleado" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMFGEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerMFGEmpleadoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCondicionEsmalte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCondicionEsmalteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCondicionEsmalteResult" nillable="true" type="q16:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCondicionOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+        <xs:element minOccurs="0" name="CodArea" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCondicionOperacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCondicionOperacionResult" nillable="true" type="q17:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCondicionPasta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCondicionPastaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCondicionPastaResult" nillable="true" type="q18:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfiguracionBancoDetalle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodConfigBanco" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfiguracionBancoDetalleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerConfiguracionBancoDetalleResult" nillable="true" type="q19:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfiguracionBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="planta" type="xs:int" />
+        <xs:element minOccurs="0" name="ct" type="xs:int" />
+        <xs:element minOccurs="0" name="maquina" type="xs:int" />
+        <xs:element minOccurs="0" name="activo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfiguracionBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerConfiguracionBancoResult" nillable="true" type="q20:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInventarioEnProceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodAlmacen" type="xs:int" />
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+        <xs:element minOccurs="0" name="CodTipoArticulo" type="xs:int" />
+        <xs:element minOccurs="0" name="CodArticulo" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Opcion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInventarioEnProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerInventarioEnProcesoResult" nillable="true" type="q21:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerInventarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerInventarioResult" nillable="true" type="q22:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPiezasReemplazo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SinPiezasreemplazadas" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPiezasReemplazoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerPiezasReemplazoResult" nillable="true" type="q23:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodConfiguracion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerConfigResult" nillable="true" type="q24:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRepCapInstalada">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Opcion" type="xs:int" />
+        <xs:element minOccurs="0" name="Planta" type="xs:int" />
+        <xs:element minOccurs="0" name="CT" type="xs:int" />
+        <xs:element minOccurs="0" name="Banco" type="xs:int" />
+        <xs:element minOccurs="0" name="TipoArt" type="xs:int" />
+        <xs:element minOccurs="0" name="Molde" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRepCapInstaladaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerRepCapInstaladaResult" nillable="true" type="q25:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMetasProd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="FechaInicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="FechaFin" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMetasProdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerMetasProdResult" nillable="true" type="q26:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerKardexProductoBusqueda">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerKardexProductoBusquedaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerKardexProductoBusquedaResult" nillable="true" type="q27:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerKardexProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerKardexProductoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerKardexProductoResult" nillable="true" type="q28:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerKardexProductoDefecto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerKardexProductoDefectoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerKardexProductoDefectoResult" nillable="true" type="q29:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPlanta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://LAMOSA/SCPP/BE" minOccurs="0" name="Planta" nillable="true" type="q30:Planta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPlantaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPrueba">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://LAMOSA/SCPP/BE" minOccurs="0" name="Prueba" nillable="true" type="q31:Prueba" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPruebaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://LAMOSA/SCPP/BE" minOccurs="0" name="Usuario" nillable="true" type="q32:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://LAMOSA/SCPP/BE" minOccurs="0" name="GuardarUsuarioResult" nillable="true" type="q33:Usuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTurno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://LAMOSA/SCPP/BE" minOccurs="0" name="Turno" nillable="true" type="q34:Turno" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarTurnoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCondicionPasta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://LAMOSA/SCPP/BE" minOccurs="0" name="CP" nillable="true" type="q35:CondicionPasta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCondicionPastaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCondicionOperacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://LAMOSA/SCPP/BE" minOccurs="0" name="CO" nillable="true" type="q36:CondicionOperacionGuarda" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCondicionOperacionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaRol">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://LAMOSA/SCPP/BE" minOccurs="0" name="RolPlanta" nillable="true" type="q37:rolplanta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaRolResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://LAMOSA/SCPP/BE" minOccurs="0" name="Conf" nillable="true" type="q38:Configuracion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarConfigResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCondicionEsmalte">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://LAMOSA/SCPP/BE" minOccurs="0" name="CE" nillable="true" type="q39:CondicionEsmalte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCondicionEsmalteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarConfigBanco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://LAMOSA/SCPP/BE" minOccurs="0" name="CB" nillable="true" type="q40:ConfigBancoResgistro" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarConfigBancoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GuardarConfigBancoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaRutaProceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://LAMOSA/SCPP/BE" minOccurs="0" name="RutaProceso" nillable="true" type="q41:RutaProceso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaRutaProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://LAMOSA/SCPP/BE" minOccurs="0" name="GuardaRutaProcesoResult" nillable="true" type="q42:RutaProceso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaInventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://LAMOSA/SCPP/BE" minOccurs="0" name="inv" nillable="true" type="q43:Inventario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardaInventarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMetasProd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://LAMOSA/SCPP/BE" minOccurs="0" name="MP" nillable="true" type="q44:MetasProd" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarMetasProdResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarTerminarInventario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codInventario" type="xs:int" />
+        <xs:element minOccurs="0" name="enProceso" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarTerminarInventarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRutaProceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://LAMOSA/SCPP/BE" minOccurs="0" name="RutaProceso" nillable="true" type="q45:RutaProceso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EliminaRutaProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://LAMOSA/SCPP/BE" minOccurs="0" name="EliminaRutaProcesoResult" nillable="true" type="q46:RutaProceso" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTurnos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTurnosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerTurnosResult" nillable="true" type="q47:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalidades">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalidadesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCalidadesResult" nillable="true" type="q48:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalidadesCbo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCalidadesCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCalidadesCboResult" nillable="true" type="q49:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerColores">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerColoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerColoresResult" nillable="true" type="q50:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArticulos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://LAMOSA/SCPP/BE" minOccurs="0" name="articuloPars" nillable="true" type="q51:ArticuloPars" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArticulosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerArticulosResult" nillable="true" type="q52:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArticulosCbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoArticulo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArticulosCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerArticulosCboResult" nillable="true" type="q53:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerModelosCbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoArticulo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerModelosCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerModelosCboResult" nillable="true" type="q54:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTiposArticuloCbo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTiposArticuloCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerTiposArticuloCboResult" nillable="true" type="q55:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMoldesCbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://LAMOSA/SCPP/BE" minOccurs="0" name="articuloPars" nillable="true" type="q56:ArticuloPars" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMoldesCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerMoldesCboResult" nillable="true" type="q57:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMoldes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://LAMOSA/SCPP/BE" minOccurs="0" name="articuloPars" nillable="true" type="q58:ArticuloPars" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMoldesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerMoldesResult" nillable="true" type="q59:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://LAMOSA/SCPP/BE" minOccurs="0" name="lu" nillable="true" type="q60:LoginUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://LAMOSA/SCPP/BE" minOccurs="0" name="LoginResult" nillable="true" type="q61:LoginUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPruebas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Proceso" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPruebasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerPruebasResult" nillable="true" type="q62:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDefectos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodProceso" type="xs:int" />
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDefectosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerDefectosResult" nillable="true" type="q63:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTiposDefecto">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTiposDefectoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerTiposDefectoResult" nillable="true" type="q64:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerZonaDefecto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodTipoArticulo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerZonaDefectoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerZonaDefectoResult" nillable="true" type="q65:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAlmacen">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAlmacenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerAlmacenResult" nillable="true" type="q66:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAlmacenCbo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAlmacenCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerAlmacenCboResult" nillable="true" type="q67:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPlanta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Almacen" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPlantaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerPlantaResult" nillable="true" type="q68:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCentroTrabajo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Planta" type="xs:int" />
+        <xs:element minOccurs="0" name="Proceso" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCentroTrabajoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCentroTrabajoResult" nillable="true" type="q69:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCentroTrabajoCbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Planta" type="xs:int" />
+        <xs:element minOccurs="0" name="Proceso" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCentroTrabajoCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerCentroTrabajoCboResult" nillable="true" type="q70:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerArea">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CT" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAreaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerAreaResult" nillable="true" type="q71:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEstructuraPlanta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Planta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEstructuraPlantaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerEstructuraPlantaResult" nillable="true" type="q72:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProcesoCbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Planta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProcesoCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerProcesoCboResult" nillable="true" type="q73:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProceso">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerProcesoResult" nillable="true" type="q74:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRutaProceso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Planta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRutaProcesoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerRutaProcesoResult" nillable="true" type="q75:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRol">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRolResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerRolResult" nillable="true" type="q76:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRolCbo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerRolCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerRolCboResult" nillable="true" type="q77:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="CodPuesto" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerEmpleadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerEmpleadoResult" nillable="true" type="q78:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPlantaCbo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPlantaCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerPlantaCboResult" nillable="true" type="q79:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMaquinaCbo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codArea" type="xs:int" />
+        <xs:element minOccurs="0" name="codCT" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMaquinaCboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerMaquinaCboResult" nillable="true" type="q80:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMaquina">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codPlanta" type="xs:int" />
+        <xs:element minOccurs="0" name="codProceso" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerMaquinaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerMaquinaResult" nillable="true" type="q81:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPuesto">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPuestoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://LAMOSA/SCPP/BE" minOccurs="0" name="ObtenerPuestoResult" nillable="true" type="q82:ArrayOfBSE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

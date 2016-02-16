@@ -1,0 +1,36 @@
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.ServiceHH.dll.config
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.ServiceHH.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.ServiceHH.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.SolutionEntityFramework.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessComponent.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessEntity.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.DataAccess.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.DataAccess.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessComponent.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.SolutionEntityFramework.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessEntity.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\obj\Debug\LAMOSA.SCPP.Server.ServiceHH.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\obj\Debug\LAMOSA.SCPP.Server.ServiceHH.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.Utileria.dll
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.pdb
+D:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LamosaSCPP\LAMOSA\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.Utileria.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.ServiceHH.dll.config
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.ServiceHH.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.ServiceHH.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.SolutionEntityFramework.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessComponent.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessEntity.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.DataAccess.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.Utileria.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.SolutionEntityFramework.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessEntity.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\LAMOSA.SCPP.Server.BusinessComponent.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Common.DataAccess.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\bin\Lamosa.SCPP.Common.Utileria.pdb
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\obj\Debug\ResolveAssemblyReference.cache
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\obj\Debug\LAMOSA.SCPP.Server.ServiceHH.dll
+C:\Desarrollo\Lamosa\SCPP\Server\Service\LAMOSA.SCPP.Server.ServiceHH\obj\Debug\LAMOSA.SCPP.Server.ServiceHH.pdb

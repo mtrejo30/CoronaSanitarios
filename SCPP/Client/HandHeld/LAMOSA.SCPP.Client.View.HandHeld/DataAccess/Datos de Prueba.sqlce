@@ -1,0 +1,460 @@
+-- Datos de prueba.
+
+select * from configuracion c;
+select * from almacen a;
+select * from planta p;
+select * from proceso p;
+select * from centro_trabajo ct;
+select * from area a;
+select * from tipo_maquina tm;
+select * from maquina m;
+--
+select * from puesto p;
+select * from empleado e;
+select * from rol r;
+select * from usuario;
+select * from rol_planta rp;
+--
+select * from config_banco cb;
+select * from molde m;
+select * from config_banco_molde_det cbmd;
+select * from config_banco_molde cbm;
+select * from pieza p;
+select * from carro_pieza cp;
+select * from prueba p;
+select * from turno t;
+select * from config_handheld ch;
+select * from tipo_articulo ta;
+select * from grupo_articulo ga;
+select * from articulo a;
+select * from color c;
+select * from calidad c;
+select * from SCPP_pantalla;
+select * from proceso_pantalla;
+
+-------------------------------------------------------------------------
+delete from proceso_pantalla;
+delete from SCPP_pantalla;
+delete from calidad;
+delete from color;
+delete from articulo;
+delete from grupo_articulo;
+delete from tipo_articulo;
+delete from config_handheld;
+delete from turno;
+delete from prueba;
+delete from carro_pieza;
+delete from pieza;
+delete from config_banco_molde;
+delete from config_banco_molde_det;
+delete from molde;
+delete from config_banco;
+--
+delete from rol_planta;
+delete from usuario;
+delete from rol;
+delete from empleado;
+delete from puesto;
+--
+delete from maquina;
+delete from tipo_maquina;
+delete from area;
+delete from centro_trabajo;
+--
+delete from proceso where cod_proceso in (7, 8, 9);
+delete from proceso where cod_proceso in (6);
+delete from proceso where cod_proceso in (5);
+delete from proceso where cod_proceso in (4);
+delete from proceso where cod_proceso in (3);
+delete from proceso where cod_proceso in (2);
+delete from proceso where cod_proceso in (1);
+--
+delete from planta;
+delete from almacen;
+delete from configuracion;
+
+-------------------------------------------------------------------------
+
+-- configuracion
+insert into configuracion (cod_configuracion, des_configuracion, valor_configuracion)
+values (1, 'Num. intentos acceso al sistema', 3);
+insert into configuracion (cod_configuracion, des_configuracion, valor_configuracion)
+values (2, 'Dias de vigencia password usuario', 30);
+insert into configuracion (cod_configuracion, des_configuracion, valor_configuracion)
+values (3, 'Dias aviso contraseña vence', 5);
+
+-- almacen
+insert into almacen (cod_almacen, des_almacen, fecha_registro, fecha_baja)
+values (1, 'Almacen Monterrey', getdate(), null);
+insert into almacen (cod_almacen, des_almacen, fecha_registro, fecha_baja)
+values (2, 'Almacen Benito Juarez', getdate(), null);
+
+-- planta
+insert into planta (cod_planta, des_planta, cod_almacen, fecha_registro, fecha_baja)
+values (1, 'Planta MTY Sur', 1, getdate(), null);
+insert into planta (cod_planta, des_planta, cod_almacen, fecha_registro, fecha_baja)
+values (2, 'Planta MTY Norte', 1, getdate(), null);
+insert into planta (cod_planta, des_planta, cod_almacen, fecha_registro, fecha_baja)
+values (3, 'Planta BJ Oriente', 2, getdate(), null);
+insert into planta (cod_planta, des_planta, cod_almacen, fecha_registro, fecha_baja)
+values (4, 'Planta BJ Poniente', 2, getdate(), null);
+
+-- proceso
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (1, 'Vaciado', 1, 1, null, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (2, 'Secado', 1, 1, 1, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (3, 'Revisado', 1, 1, 2, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (4, 'Esmaltado', 1, 1, 3, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (5, 'Quemado', 1, 1, 4, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (6, 'Clasificado', 1, 1, 5, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (7, 'Auditado', 1, 1, 6, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (8, 'Empacado', 1, 1, 6, getdate(), null);
+insert into proceso (cod_proceso, des_proceso, interfase_MFG, requerido, cod_proceso_padre, fecha_registro, fecha_baja)
+values (9, 'Paletizado', 1, 1, 6, getdate(), null);
+
+-- centro_trabajo
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (1, 'Vaciado P1', 1, 1, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (2, 'Secado P1', 1, 2, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (3, 'Revisado P1', 1, 3, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (4, 'Esmaltado P1', 1, 4, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (5, 'Quemado P1', 1, 5, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (11, 'Vaciado P2', 2, 1, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (12, 'Secado P2', 2, 2, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (13, 'Revisado P2', 2, 3, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (14, 'Esmaltado P2', 2, 4, '', getdate(), null);
+insert into centro_trabajo (cod_centro_trabajo, des_centro_trabajo, cod_planta, cod_proceso, linea_produccion, fecha_registro, fecha_baja)
+values (15, 'Quemado P2', 2, 5, '', getdate(), null);
+
+-- area
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (1, 'Area Vac 01', 1, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (2, 'Area Sec 01', 2, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (3, 'Area Rev 01', 3, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (4, 'Area Esm 01', 4, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (5, 'Area Que 01', 5, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (11, 'Area Vac 02', 11, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (12, 'Area Sec 02', 12, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (13, 'Area Rev 02', 13, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (14, 'Area Esm 02', 13, getdate(), null);
+insert into area (cod_area, des_area, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (15, 'Area Que 02', 13, getdate(), null);
+
+-- tipo_maquina
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (1, 'Banco', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (2, 'Secador', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (3, 'Caseta Revisado', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (4, 'Caseta Esmaltado', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (5, 'Horno Tunel', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (6, 'Horno Batch', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (7, 'Caseta Clasificado', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (8, 'Auditoria', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (9, 'Empaque', getdate(), null);
+insert into tipo_maquina (cod_tipo_maquina, des_tipo_maquina, fecha_registro, fecha_baja)
+values (10, 'Paletizado', getdate(), null);
+
+-- maquina
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (1, 'm01', 'Banco 1', 1, 1, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (2, 'm02', 'Banco 2', 11, 1, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (3, 's01', 'Secador 1', 2, 2, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (4, 's02', 'Secador 2', 12, 2, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (5, 'cr01', 'Caseta Revisado 1', 3, 3, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (6, 'cr02', 'Caseta Revisado 2', 13, 3, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (7, 'ce01', 'Caseta Esmaltado 1', 4, 4, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (8, 'ce02', 'Caseta Esmaltado 2', 14, 4, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (9, 'cq01', 'Horno Quemado 1', 5, 5, getdate(), null);
+insert into maquina (cod_maquina, clave_maquina, des_maquina, cod_area, cod_tipo_maquina, fecha_registro, fecha_baja)
+values (10, 'cq02', 'Horno Quemado 2', 15, 5, getdate(), null);
+
+-- puesto
+insert into puesto (cod_puesto, des_puesto, fecha_registro, fecha_baja)
+values (1, 'Administrador', getdate(), null);
+insert into puesto (cod_puesto, des_puesto, fecha_registro, fecha_baja)
+values (2, 'Vaciador', getdate(), null);
+insert into puesto (cod_puesto, des_puesto, fecha_registro, fecha_baja)
+values (3, 'Secador', getdate(), null);
+insert into puesto (cod_puesto, des_puesto, fecha_registro, fecha_baja)
+values (4, 'Temporal', getdate(), null);
+
+-- empleado
+insert into empleado (cod_empleado, clave_empleado_MFG, clave_empleado_nomina, nombre, ap_paterno, ap_materno, cod_puesto, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (1, 1, 1, 'Sergio', 'Arevalo', 'Sanchez', 1, 1, getdate(), null);
+insert into empleado (cod_empleado, clave_empleado_MFG, clave_empleado_nomina, nombre, ap_paterno, ap_materno, cod_puesto, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (2, 2, 2, 'Erwin', 'Gomez', 'Rivero', 2, 1, getdate(), null);
+insert into empleado (cod_empleado, clave_empleado_MFG, clave_empleado_nomina, nombre, ap_paterno, ap_materno, cod_puesto, cod_centro_trabajo, fecha_registro, fecha_baja)
+values (3, 3, 3, 'Hector', 'Portillo', 'Jaramillo', 3, 2, getdate(), null);
+
+-- rol
+insert into rol (cod_rol, des_rol, fecha_registro, fecha_baja)
+values (1, 'Administrador', getdate(), null);
+insert into rol (cod_rol, des_rol, fecha_registro, fecha_baja)
+values (2, 'Consulta', getdate(), null);
+insert into rol (cod_rol, des_rol, fecha_registro, fecha_baja)
+values (3, 'Operador', getdate(), null);
+
+-- usuario
+insert into usuario (cod_usuario, login, password, cod_empleado, cod_rol, cod_supervisor, num_intentos, bloqueado, email, fecha_vig_password, fecha_registro, fecha_baja)
+values (1, 'sarevalo', 'sarevalo', 1, 1, 1, 0, 0, 'sarevalo@lamosa.com', '2011-12-31', getdate(), null);
+insert into usuario (cod_usuario, login, password, cod_empleado, cod_rol, cod_supervisor, num_intentos, bloqueado, email, fecha_vig_password, fecha_registro, fecha_baja)
+values (2, 'egomez', 'egomez', 2, 2, 1, 0, 0, 'egomez@neitek.com', '2011-12-31', getdate(), null);
+insert into usuario (cod_usuario, login, password, cod_empleado, cod_rol, cod_supervisor, num_intentos, bloqueado, email, fecha_vig_password, fecha_registro, fecha_baja)
+values (3, 'hportillo', 'hportillo', 3, 3, 1, 0, 0, 'hportillo@lamosa.com', '2011-12-31', getdate(), null);
+
+-- rol_planta
+insert into rol_planta (cod_rol, cod_planta)
+values (1, 1);
+insert into rol_planta (cod_rol, cod_planta)
+values (2, 1);
+insert into rol_planta (cod_rol, cod_planta)
+values (3, 1);
+insert into rol_planta (cod_rol, cod_planta)
+values (1, 2);
+insert into rol_planta (cod_rol, cod_planta)
+values (2, 2);
+insert into rol_planta (cod_rol, cod_planta)
+values (3, 2);
+
+-- config_banco
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (1, 1, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (2, 2, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (3, 3, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (4, 4, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (5, 5, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (6, 6, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (7, 7, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (8, 8, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (9, 9, 1, 1, getdate(), '2010-01-01', null);
+insert into config_banco (cod_config_banco, cod_maquina, cod_usuario_alta, cod_usuario_autoriza, fecha_autorizacion, fecha_inicio, fecha_fin)
+values (10, 10, 1, 1, getdate(), '2010-01-01', null);
+
+-- molde
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (1, '3539', 'Lv. Senna', 2, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (2, '3529', 'Lv. Holiday', 2, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (3, '3521', 'Lv. Vernezia', 2, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (4, '3358', 'Lv. Milan', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (5, '3137', 'Tz. Forza EL', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (6, '3123', 'Tz. Rhodas', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (7, '3122', 'Tz. Realza', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (8, '3107', 'Tz. Tulipan', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (9, '3464', 'Pd. Forza EL', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (10, '3475', 'Pd. Rhodas', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (11, '3422', 'Pd. Realza', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (12, '3427', 'Pd. Tulipan', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (13, '3436', 'Tq. Vicenza', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (14, '3356', 'Tq. Loreto', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (15, '3115', 'Tq. Realza', 1, getdate(), null);
+insert into molde (cod_molde, clave_molde, des_molde, num_impresiones, fecha_registro, fecha_baja)
+values (16, '3102', 'Tq. Tulipan', 1, getdate(), null);
+
+-- config_banco_molde_det
+insert into config_banco_molde_det (cod_config_banco, cod_molde, limite_vaciadas, vaciadas_acumuladas, vaciadas_dia, cantidad_moldes, cod_consecutivo)
+values (1, 5, 20, 0, 3, 30, 1);
+
+-- config_banco_molde
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 1);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 2);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 3);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 4);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 5);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 6);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 7);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 8);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 9);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 10);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 11);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 12);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 13);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 14);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 15);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 16);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 17);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 18);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 19);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 20);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 21);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 22);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 23);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 24);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 25);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 26);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 27);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 28);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 29);
+insert into config_banco_molde (cod_consecutivo, posicion) values (1, 30);
+
+-- prueba
+insert into prueba (cod_prueba, des_prueba, cod_proceso, cod_proceso_fin, residencia_max, fecha_registro, fecha_baja, cod_planta)
+values (1, 'Prueba Vaciado 1', 1, 1, 5, getdate(), null, 1);
+insert into prueba (cod_prueba, des_prueba, cod_proceso, cod_proceso_fin, residencia_max, fecha_registro, fecha_baja, cod_planta)
+values (2, 'Prueba Secado 1', 2, 2, 8, getdate(), null, 1);
+insert into prueba (cod_prueba, des_prueba, cod_proceso, cod_proceso_fin, residencia_max, fecha_registro, fecha_baja, cod_planta)
+values (3, 'Prueba Revisado 1', 3, 3, 6, getdate(), null, 1);
+
+-- turno
+insert into turno (cod_turno, des_turno, hora_inicio, hora_fin, fecha_registro, fecha_baja)
+values (1, 'Matutino', '06:00', '15:00', getdate(), null);
+insert into turno (cod_turno, des_turno, hora_inicio, hora_fin, fecha_registro, fecha_baja)
+values (2, 'Vespertino', '16:00', '21:00', getdate(), null);
+
+-- tipo_articulo
+insert into tipo_articulo (cod_tipo_articulo, clave_tipo_articulo, des_tipo_articulo, fecha_registro, fecha_baja)
+values (1, 'Lv', 'Lavabo', getdate(), null);
+insert into tipo_articulo (cod_tipo_articulo, clave_tipo_articulo, des_tipo_articulo, fecha_registro, fecha_baja)
+values (2, 'Tz', 'Taza', getdate(), null);
+insert into tipo_articulo (cod_tipo_articulo, clave_tipo_articulo, des_tipo_articulo, fecha_registro, fecha_baja)
+values (3, 'Pd', 'Pedestal', getdate(), null);
+insert into tipo_articulo (cod_tipo_articulo, clave_tipo_articulo, des_tipo_articulo, fecha_registro, fecha_baja)
+values (4, 'Tq', 'Tanque', getdate(), null);
+
+-- grupo_articulo
+insert into grupo_articulo (cod_grupo_articulo, des_grupo_articulo, fecha_registro, fecha_baja)
+values (1, 'Grupo A', getdate(), null);
+insert into grupo_articulo (cod_grupo_articulo, des_grupo_articulo, fecha_registro, fecha_baja)
+values (2, 'Grupo B', getdate(), null);
+insert into grupo_articulo (cod_grupo_articulo, des_grupo_articulo, fecha_registro, fecha_baja)
+values (3, 'Grupo C', getdate(), null);
+insert into grupo_articulo (cod_grupo_articulo, des_grupo_articulo, fecha_registro, fecha_baja)
+values (4, 'Grupo D', getdate(), null);
+
+-- articulo
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (1, '3539', 'Lv. Senna', 1, 1, 1, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (2, '3529', 'Lv. Holiday', 1, 2, 1, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (3, '3521', 'Lv. Vernezia', 1, 3, 1, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (4, '3358', 'Lv. Milan', 1, 4, 1, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (5, '3137', 'Tz. Forza EL', 2, 5, 2, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (6, '3123', 'Tz. Rhodas', 2, 6, 2, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (7, '3122', 'Tz. Realza', 2, 7, 2, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (8, '3107', 'Tz. Tulipan', 2, 8, 2, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (9, '3137', 'Pd. Forza EL', 3, 9, 3, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (10, '3123', 'Pd. Rhodas', 3, 10, 3, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (11, '3122', 'Pd. Realza', 3, 11, 3, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (12, '3107', 'Pd. Tulipan', 3, 12, 3, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (13, '3464', 'Tq. Vicenza', 4, 13, 4, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (14, '3475', 'Tq. Loreto', 4, 14, 4, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (15, '3422', 'Tq. Realza', 4, 15, 4, getdate(), null);
+insert into articulo (cod_articulo, clave_articulo, des_articulo, cod_tipo_articulo, cod_molde, cod_grupo_articulo, fecha_registro, fecha_baja)
+values (16, '3427', 'Tq. Tulipan', 4, 16, 4, getdate(), null);
+
+-- color
+insert into color (cod_color, clave_color, des_color, fecha_registro, fecha_baja)
+values (1, 'B01', 'Blanco', getdate(), null);
+insert into color (cod_color, clave_color, des_color, fecha_registro, fecha_baja)
+values (2, 'N01', 'Negro', getdate(), null);
+insert into color (cod_color, clave_color, des_color, fecha_registro, fecha_baja)
+values (3, 'R01', 'Rojo', getdate(), null);
+insert into color (cod_color, clave_color, des_color, fecha_registro, fecha_baja)
+values (4, 'V01', 'Verde', getdate(), null);
+
+-- calidad
+insert into calidad (cod_calidad, clave_calidad, des_calidad, fecha_registro, fecha_baja)
+values (1, 'A', 'Calidad A', getdate(), null);
+
+-- SCPP_pantalla
+insert into SCPP_pantalla (cod_pantalla, des_pantalla, fecha_registro, fecha_baja)
+values (1, 'Captura Vaciado', getdate(), null);
+insert into SCPP_pantalla (cod_pantalla, des_pantalla, fecha_registro, fecha_baja)
+values (2, 'Armado Carro Secador', getdate(), null);
+insert into SCPP_pantalla (cod_pantalla, des_pantalla, fecha_registro, fecha_baja)
+values (3, 'Entrada Carro Secador', getdate(), null);
+insert into SCPP_pantalla (cod_pantalla, des_pantalla, fecha_registro, fecha_baja)
+values (4, 'Captura Revisado', getdate(), null);
+insert into SCPP_pantalla (cod_pantalla, des_pantalla, fecha_registro, fecha_baja)
+values (5, 'Captura Esmaltado', getdate(), null);
+insert into SCPP_pantalla (cod_pantalla, des_pantalla, fecha_registro, fecha_baja)
+values (6, 'Captura Quemado', getdate(), null);
+
+-- proceso_pantalla
+insert into proceso_pantalla (cod_proceso, cod_pantalla)
+values (1, 1);
+insert into proceso_pantalla (cod_proceso, cod_pantalla)
+values (1, 2);
+insert into proceso_pantalla (cod_proceso, cod_pantalla)
+values (2, 3);
+insert into proceso_pantalla (cod_proceso, cod_pantalla)
+values (3, 4);
+insert into proceso_pantalla (cod_proceso, cod_pantalla)
+values (4, 5);
+insert into proceso_pantalla (cod_proceso, cod_pantalla)
+values (5, 6);
+
+-------------------------------------------------------------------------

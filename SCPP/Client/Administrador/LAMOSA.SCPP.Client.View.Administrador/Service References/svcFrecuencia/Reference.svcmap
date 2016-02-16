@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c9828057-f614-49b9-bfe7-bffa67cc0e9a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/scpp/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Lamosa4.xsd" MetadataType="Schema" ID="44c14976-cc5c-4a7a-9d1d-b6e05c58d51b" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd3" />
+    <MetadataFile FileName="Lamosa41.xsd" MetadataType="Schema" ID="575651c8-8412-466e-a751-9284dbcd45fd" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd2" />
+    <MetadataFile FileName="Lamosa42.xsd" MetadataType="Schema" ID="41819366-3112-45cf-8e47-0ba21f9d5df7" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd1" />
+    <MetadataFile FileName="Lamosa1.disco" MetadataType="Disco" ID="9183ea8a-a0ca-4c78-b7a8-51170649f84c" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?disco" />
+    <MetadataFile FileName="Lamosa43.xsd" MetadataType="Schema" ID="02713e0c-1618-40c9-a35f-400b8ccbe74b" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?xsd=xsd0" />
+    <MetadataFile FileName="Lamosa2.wsdl" MetadataType="Wsdl" ID="b73178b3-18fd-4444-8a0a-f7a1da0bbe7d" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?wsdl=wsdl1" />
+    <MetadataFile FileName="Lamosa21.wsdl" MetadataType="Wsdl" ID="546c62e5-82dd-4725-8003-2a839ca5ef67" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="FrecuenciaServiceManager1.wsdl" MetadataType="Wsdl" ID="f0ee1e86-5ae7-4b56-8ff0-485c9eb28698" SourceId="1" SourceUrl="http://villa.sasant/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.FrecuenciaServiceManager.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

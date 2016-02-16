@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4e9747d2-fc71-473b-8604-f5d80ef4e14e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/scppservicehh/SCPPHHService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SCPPHHService.xsd" MetadataType="Schema" ID="f5507dfb-de75-410d-949b-bf4f0d881840" SourceId="1" SourceUrl="http://villa.sasant/scppservicehh/SCPPHHService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SCPP_HH.wsdl" MetadataType="Wsdl" ID="2ca3e05a-7f04-4600-ac93-90bf92357b11" SourceId="1" SourceUrl="http://villa.sasant/scppservicehh/SCPPHHService.svc?wsdl" />
+    <MetadataFile FileName="SCPPHHService.disco" MetadataType="Disco" ID="348338ae-7241-4637-bb35-b8ead697e9c7" SourceId="1" SourceUrl="http://villa.sasant/scppservicehh/SCPPHHService.svc?disco" />
+    <MetadataFile FileName="SCPPHHService1.xsd" MetadataType="Schema" ID="e2e7457b-47bb-44f6-8609-170632295f0d" SourceId="1" SourceUrl="http://villa.sasant/scppservicehh/SCPPHHService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SCPPHHService2.xsd" MetadataType="Schema" ID="173800ad-f47f-4bef-820c-6cf0d967856a" SourceId="1" SourceUrl="http://villa.sasant/scppservicehh/SCPPHHService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SCPPHHService3.xsd" MetadataType="Schema" ID="354b1b56-2ea9-430a-9f39-7ce53752ae0f" SourceId="1" SourceUrl="http://villa.sasant/scppservicehh/SCPPHHService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SCPPHHService4.xsd" MetadataType="Schema" ID="f7597409-0fa4-4253-ac1c-0a1329a0dcf5" SourceId="1" SourceUrl="http://villa.sasant/scppservicehh/SCPPHHService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

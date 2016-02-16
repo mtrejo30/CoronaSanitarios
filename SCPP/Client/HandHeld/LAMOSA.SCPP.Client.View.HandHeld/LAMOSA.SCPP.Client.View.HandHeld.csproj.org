@@ -1,0 +1,393 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9AD744B-604B-4CAA-8947-A4A1BC9150DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LAMOSA.SCPP.Client.View.HandHeld</RootNamespace>
+    <AssemblyName>LAMOSA.SCPP.Client.View.HandHeld</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>Lamosa</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SccProjectName>"%24/LAMOSA_SCPP/LAMOSA/SCPP/Client/HandHeld/LAMOSA.SCPP.Client.View.HandHeld", FNCAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <StartupObject>LAMOSA.SCPP.Client.View.HandHeld.Program</StartupObject>
+    <DeployDirPrefix>%25CSIDL_PROGRAM_FILES%25</DeployDirPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessComponent\c00_Transacciones.cs" />
+    <Compile Include="BusinessComponent\c12_CapturaAuditoria.cs" />
+    <Compile Include="BusinessComponent\c13_CapturaInventario.cs" />
+    <Compile Include="BusinessComponent\c14_ReemplazoEtiqueta.cs" />
+    <Compile Include="DataAccess\ConfigDataAccess.cs" />
+    <Compile Include="DataAccess\MSSQLce.cs" />
+    <Compile Include="User Interface\a00_CargaDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a00_CargaDatos.Designer.cs">
+      <DependentUpon>a00_CargaDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessComponent\c00_CargaDatos.cs" />
+    <Compile Include="BusinessComponent\c00_Control.cs" />
+    <Compile Include="BusinessComponent\c00_Common.cs" />
+    <Compile Include="BusinessComponent\c01_Login.cs" />
+    <Compile Include="BusinessComponent\c02_SeleccionPlanta.cs" />
+    <Compile Include="BusinessComponent\c04_Defectos.cs" />
+    <Compile Include="BusinessComponent\c07_CapturaRevisado.cs" />
+    <Compile Include="BusinessComponent\c08_CapturaEsmaltado.cs" />
+    <Compile Include="BusinessComponent\c09_CapturaHornos.cs" />
+    <Compile Include="BusinessComponent\c11_ArmadoTarima.cs" />
+    <Compile Include="BusinessComponent\c11_CapturaEmpaque.cs" />
+    <Compile Include="User Interface\a04_CapturaCodigoBarras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a04_CapturaCodigoBarras.Designer.cs">
+      <DependentUpon>a04_CapturaCodigoBarras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a04_ConsultarPieza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a04_ConsultarPieza.Designer.cs">
+      <DependentUpon>a04_ConsultarPieza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a01_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a01_Login.Designer.cs">
+      <DependentUpon>a01_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a02_SeleccionPlanta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a02_SeleccionPlanta.Designer.cs">
+      <DependentUpon>a02_SeleccionPlanta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a03_ConfiguracionInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a03_ConfiguracionInicial.Designer.cs">
+      <DependentUpon>a03_ConfiguracionInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a04_CapturaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a04_CapturaInicial.Designer.cs">
+      <DependentUpon>a04_CapturaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a05_CapturaVaciado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a05_CapturaVaciado.Designer.cs">
+      <DependentUpon>a05_CapturaVaciado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a04_Defectos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a04_Defectos.Designer.cs">
+      <DependentUpon>a04_Defectos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a05_ArmadoCarroSecador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a05_ArmadoCarroSecador.Designer.cs">
+      <DependentUpon>a05_ArmadoCarroSecador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a06_EntradaCarroSecador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a06_EntradaCarroSecador.Designer.cs">
+      <DependentUpon>a06_EntradaCarroSecador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a07_CapturaRevisado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a07_CapturaRevisado.Designer.cs">
+      <DependentUpon>a07_CapturaRevisado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a08_CapturaEsmaltado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a08_CapturaEsmaltado.Designer.cs">
+      <DependentUpon>a08_CapturaEsmaltado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a09_CapturaHornos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a09_CapturaHornos.Designer.cs">
+      <DependentUpon>a09_CapturaHornos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessComponent\c05_ArmadoCarroSecado.cs" />
+    <Compile Include="BusinessComponent\c04_CapturaInicial.cs" />
+    <Compile Include="BusinessComponent\c05_CapturaVaciado.cs" />
+    <Compile Include="BusinessComponent\c03_ConfiguracionInicial.cs" />
+    <Compile Include="BusinessComponent\c06_EntradaCarroSecador.cs" />
+    <Compile Include="BusinessComponent\c00_LoginUsuario.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="User Interface\a00_CargaDatos.resx">
+      <DependentUpon>a00_CargaDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a04_CapturaCodigoBarras.resx">
+      <DependentUpon>a04_CapturaCodigoBarras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a04_ConsultarPieza.resx">
+      <DependentUpon>a04_ConsultarPieza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a01_Login.resx">
+      <DependentUpon>a01_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a02_SeleccionPlanta.resx">
+      <DependentUpon>a02_SeleccionPlanta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a03_ConfiguracionInicial.resx">
+      <DependentUpon>a03_ConfiguracionInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a04_CapturaInicial.resx">
+      <DependentUpon>a04_CapturaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a05_CapturaVaciado.resx">
+      <DependentUpon>a05_CapturaVaciado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a04_Defectos.resx">
+      <DependentUpon>a04_Defectos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a05_ArmadoCarroSecador.resx">
+      <DependentUpon>a05_ArmadoCarroSecador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a06_EntradaCarroSecador.resx">
+      <DependentUpon>a06_EntradaCarroSecador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a07_CapturaRevisado.resx">
+      <DependentUpon>a07_CapturaRevisado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a08_CapturaEsmaltado.resx">
+      <DependentUpon>a08_CapturaEsmaltado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a09_CapturaHornos.resx">
+      <DependentUpon>a09_CapturaHornos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a11_ArmadoTarima.resx">
+      <DependentUpon>a11_ArmadoTarima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a11_CapturaEmpaque.resx">
+      <DependentUpon>a11_CapturaEmpaque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a12_CapturaAuditoria.resx">
+      <DependentUpon>a12_CapturaAuditoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a13_CapturaInventario.resx">
+      <DependentUpon>a13_CapturaInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a13_PiezaNuevaInventario.resx">
+      <DependentUpon>a13_PiezaNuevaInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\a14_ReemplazoEtiqueta.resx">
+      <DependentUpon>a14_ReemplazoEtiqueta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Interface\CambioPassword.resx">
+      <DependentUpon>CambioPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilerias\Encabezado.resx">
+      <DependentUpon>Encabezado.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a11_ArmadoTarima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a11_ArmadoTarima.Designer.cs">
+      <DependentUpon>a11_ArmadoTarima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a11_CapturaEmpaque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a11_CapturaEmpaque.Designer.cs">
+      <DependentUpon>a11_CapturaEmpaque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a12_CapturaAuditoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a12_CapturaAuditoria.Designer.cs">
+      <DependentUpon>a12_CapturaAuditoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a13_CapturaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a13_CapturaInventario.Designer.cs">
+      <DependentUpon>a13_CapturaInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a13_PiezaNuevaInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a13_PiezaNuevaInventario.Designer.cs">
+      <DependentUpon>a13_PiezaNuevaInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\a14_ReemplazoEtiqueta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\a14_ReemplazoEtiqueta.Designer.cs">
+      <DependentUpon>a14_ReemplazoEtiqueta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Interface\CambioPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Interface\CambioPassword.Designer.cs">
+      <DependentUpon>CambioPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias\Encabezado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utilerias\Encabezado.Designer.cs">
+      <DependentUpon>Encabezado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias\HelperView.cs" />
+    <Compile Include="Web References\HHsvc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\svcUsuario\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataAccess\lamosa.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Utilerias\LogoHH.gif" />
+    <None Include="Web References\svcUsuario\Lamosa.disco" />
+    <None Include="Web References\HHsvc\SCPPHHService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://192.168.24.213/scppservicehh/SCPPHHService.svc">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\HHsvc\</RelPath>
+      <UpdateFromURL>http://192.168.24.213/scppservicehh/SCPPHHService.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.24.229/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManager.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\svcUsuario\</RelPath>
+      <UpdateFromURL>http://192.168.24.229/SCPP/Lamosa.SCPP.ServiceManager.ClassImpl.UsuarioServiceManager.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\HHsvc\BSE.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\HHsvc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\HHsvc\SCPPHHService.xsd" />
+    <None Include="Web References\HHsvc\SCPPHHService0.xsd" />
+    <None Include="Web References\HHsvc\SCPPHHService1.xsd" />
+    <None Include="Web References\HHsvc\SCPPHHService2.xsd" />
+    <None Include="Web References\HHsvc\SCPPHHService3.xsd" />
+    <None Include="Web References\HHsvc\SCPP_HH.wsdl" />
+    <None Include="Web References\svcUsuario\Lamosa.wsdl" />
+    <None Include="Web References\svcUsuario\Lamosa.xsd" />
+    <None Include="Web References\svcUsuario\Lamosa0.wsdl" />
+    <None Include="Web References\svcUsuario\Lamosa0.xsd" />
+    <None Include="Web References\svcUsuario\Lamosa1.xsd" />
+    <None Include="Web References\svcUsuario\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\svcUsuario\UsuarioServiceManager.wsdl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
