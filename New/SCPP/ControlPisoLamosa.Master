@@ -1,0 +1,264 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ControlPisoLamosa.Master.cs"
+    Inherits="LAMOSA.SCPP.Client.View.Administrador.ControlPisoLamosa" %>
+
+<%@ Register Assembly="Infragistics35.WebUI.UltraWebNavigator.v9.1, Version=9.1.20091.1015, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb"
+    Namespace="Infragistics.WebUI.UltraWebNavigator" TagPrefix="ignav" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Control de piso - Lamosa</title>
+    <meta name="verify-v1" content="n3Dpx4NklZjg5p/Tq7h1q+Oj6Ml83crtkO/PwepVQ6Y=" />
+    <link href="~/Estiloscss/pro-line-down-fly/menu3.css" media="screen" rel="stylesheet"
+        type="text/css" />
+    <link href="~/Estiloscss/Estilos.css" rel="stylesheet" type="text/css" />
+    <link href="~/Estiloscss/menu.css" rel="Stylesheet" type="text/css" />
+    <link href="/aspnet_client/System_Web/2_0_50727/CrystalReportWebFormViewer3/css/default.css"
+        rel="stylesheet" type="text/css" />
+
+    <script src="../FuncionesJS/jquery-1.4.2.js" type="text/javascript"></script>
+    <script src="FuncionesJS/jquery-1.4.2.js" type="text/javascript"></script>
+
+    <script src="../FuncionesJS/htmlTabControl.js" type="text/javascript"></script>
+
+    <script src="/FuncionesJS/menu.js" type="text/javascript" language="javascript"></script>
+
+    <script type="text/javascript" language="javascript">
+    </script>
+<script language ="javascript" type="text/javascript"> 
+    function goUrl(surl) {
+        debugger;
+        var slocation = new String(location.href);
+        if (slocation.search(surl) == -1) {
+            return;
+        }
+        location.reload(true);
+    }
+</script>
+</head>
+<body class="fondoLogin">
+    <form id="form1" runat="server">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="1024px">
+        <tr>
+            <td>
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td rowspan="2" class="Header1">
+                        </td>
+                        <td class="Header2">
+                            <label class="Header2Text" id="lblfecha" runat="server">
+                            </label>
+                            |
+                            <label class="Header2Text" id="lblHora" runat="server">
+                            </label>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Header3">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td style="width: 1%" valign="bottom">
+                                        &nbsp;Planta:<br />
+                                        &nbsp;<asp:DropDownList ID="cmbPlanta" runat="server" CssClass="ComboHeader3">
+                                        </asp:DropDownList>
+                                    </td>
+                                    <td>
+                                        <table align="right" border="0" cellpadding="2" cellspacing="0">
+                                            <tr>
+                                                <td>
+                                                    Nombre:
+                                                </td>
+                                                <td>
+                                                    <label id="lblNombre" class="HeaderText" runat="server">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Usuario:
+                                                </td>
+                                                <td>
+                                                    <label id="lblUsuario" class="HeaderText" runat="server">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Rol:
+                                                </td>
+                                                <td>
+                                                    <label id="lblRol" class="HeaderText" runat="server">
+                                                    </label>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="height: 20px">
+                <div id="pro_linedrop">
+                    <ul class="select">
+                        <li class="line"><a href="../Menu/Menu.aspx">Inicio</a></li>
+                        <li class="line"><a href="#nogo">Administraci&#243;n</a>
+                            <ul class="sub">
+                                <li class="subline"><a href="#nogo"><span><b>Cat&#225;logos</b></span></a>
+                                    <ul>
+                                        <li><a href="../Administracion/Empleados.aspx">Empleados</a></li>
+                                        <li><a href="../Administracion/Turnos.aspx">Turnos</a></li>
+                                        <li><a href="../Administracion/Articulos.aspx">Modelos</a></li>
+                                        <li><a href="../Administracion/Subarticulos.aspx">Art&iacute;culos</a></li>
+                                        <li><a href="../Administracion/Colores.aspx">Colores</a></li>
+                                        <li><a href="../Administracion/Calidad.aspx">Calidad</a></li>
+                                        <li><a href="../Administracion/Tiposdefecto.aspx">Defectos</a></li>
+                                        <li><a href="../Administracion/ZonaDefectos.aspx">Zona de defectos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="subline"><a href="#nogo"><span><b>Planta</b></span></a>
+                                    <ul>
+                                        <li><a href="../Planta/Proceso.aspx">Procesos</a></li>
+                                        <li><a href="../Planta/Almacen.aspx">Almac&eacute;n</a></li>
+                                        <li><a href="../Planta/Plantas.aspx">Plantas</a></li>
+                                        <li><a href="../Planta/CentroTrabajo.aspx">Centros de trabajo</a></li>
+                                        <li><a href="../Planta/Maquina.aspx">M&aacute;quinas</a></li>
+                                        <li><a href="../Planta/RutaProceso.aspx">Rutas de proceso</a></li>
+                                        <li><a href="../Planta/ConsultaEstructuraPlanta.aspx">Estructura de planta</a></li>
+                                        <li><a href=""></a></li>
+                                    </ul>
+                                </li>
+                               <!-- <li class="subline"><a href="#nogo"><span><b>Asignaci&oacute;n de etiquetas</b></span></a>
+                                    <ul>
+                                        <li><a href="../Administracion/ManejoEtiqueta.aspx">Manejo de texto de etiqueta</a></li>
+                                        <li><a href="../Administracion/DistribucionCodBarras.aspx">Distribución código de barras</a></li>
+                                      
+                                        <li><a href="../Planta/ReemplazarCodBarras.aspx">Reemplazar código de barras</a></li>
+                                    </ul>
+                                </li>-->
+                            </ul>
+                        </li>
+                        <li class="line"><a href="#nogo">Seguridad</a>
+                            <ul class="sub">
+                                <li class="subline"><a href="../Seguridad/usuarios.aspx"><span><b>Usuarios</b></span></a>
+                                </li>
+                                <li class="subline"><a href="../Seguridad/RolesUsuarios.aspx"><span><b>Roles de usuarios</b></span></a>
+                                </li>
+                                <li class="subline"><a href="../Seguridad/Configuracion.aspx"><span><b>Configuraci&oacute;n</b></span></a>
+                                </li>
+                                <li class="subline"><a href="../Seguridad/AsignacionPermisos.aspx"><span><b>Asignaci&oacute;n
+                                    de permisos</b></span></a> </li>
+                                <li class="subline"><a href="../Seguridad/CambiarContraseña.aspx"><span><b>Cambio de contraseña</b></span></a> </li>
+                            </ul>
+                        </li>
+                        <li class="line"><a href="#nogo">Operaci&oacute;n</a>
+                            <ul class="sub">
+                                <li class="subline"><a href="#nogo"><span><b>Configuraciones</b></span></a>
+                                    <ul>
+                                        <li><a href="../Configuraciones/ConsultaBancos.aspx">Configuraci&oacute;n de bancos</a></li>
+                                        <li><a href="../Configuraciones/ConfPasta.aspx">Configuraci&oacute;n de pasta</a></li>
+                                        <li><a href="../Configuraciones/ConfEsmalte.aspx">Configuraci&oacute;n de esmalte</a></li>
+                                        <li><a href="../Configuraciones/CondicionOperacion.aspx">Condiciones de operaci&oacute;n</a></li>
+                                        <li><a href="../Configuraciones/ConfiguracionImpresionEtiqueta.aspx">Impresi&oacute;n de Etiquetas</a></li>
+                                    </ul>
+                                </li>
+                                  
+                             <!--   <li class="subline"><a href="#nogo"><span><b>Alertas</b></span></a>
+                                    <ul>
+                                        <li><a href="../Configuraciones/ConfAlertas.aspx">Configuraci&oacute;n de alertas</a></li>
+                                    </ul>
+                                </li> -->
+                                <li class="subline"><a href="#nogo"><span><b>Metas</b></span></a>
+                                    <ul>
+                                        <li><a href="../Configuraciones/MetasProduccion.aspx">Metas de producci&oacute;n</a></li>
+                                    </ul>
+                                </li>
+                                <li class="subline"><a href="#nogo"><span><b>Pruebas</b></span></a>
+                                  <ul>
+                                        <li><a href="../Configuraciones/Prueba.aspx">Pruebas</a></li>
+                                    </ul>
+                                </li>
+                             <!--   <li class="subline"><a href="#nogo"><span><b>Eventos</b></span></a>
+                                    <ul>
+                                        <li><a href="../Planta/Eventos.aspx">Catálogo de eventos</a></li>
+                                        <li><a href="../Planta/EventosProceso.aspx">Eventos en Proceso</a></li>
+                                    </ul>
+                                </li>-->
+                                <li class="subline"><a href="#nogo"><span><b>Etiquetas</b></span></a>
+                                    <ul>
+                                        <li><a href="../Etiquetas/CodigosDeBarras.aspx">C&oacute;digo de Barras</a></li>
+                                        <li><a href="../Administracion/ExcedenteCodBarras.aspx">Excedente código de barras</a></li>
+                                        <li><a href="../Planta/ReemplazarCodBarras.aspx">Reemplazo de código de barras</a></li>
+                                        <li><a href="../Etiquetas/PiezasConResidencia.aspx">Piezas Con Residencia</a></li>
+                                    </ul>
+                                </li>
+                                 <li class="subline"><a href="#nogo"><span><b>Inventarios</b></span></a>
+                                    <ul>
+                                        <li><a href="../Inventarios/IniciarInventario.aspx">Iniciar inventario</a></li>
+                                        <!-- <li><a href="../Inventarios/CompararInventario.aspx">Comparar inventario</a></li>
+                                        <li><a href="../Inventarios/AjusteInventario.aspx">Ajuste de inventario</a></li>-->
+                                    </ul>
+                                </li>
+                                 <li class="subline"><a href="#nogo"><span><b>Alertas</b></span></a>
+                                    <ul>
+                                        <li><a href="../Alertas/Alertas.aspx">Alertas</a></li>
+                                 
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="line"><a href="#nogo">Reportes</a>
+                            <ul class="sub">
+                                <li class="subline"><a href="../Reportes/InventarioProceso.aspx"><span><b>Inventario
+                                    en proceso</b></span></a> </li>
+                                <li class="subline"><a href="../Reportes/CapacidadInstalada.aspx"><span><b>Capacidad
+                                    instalada</b></span></a> </li>
+                              <!--    <li class="subline"><a href="../Reportes/BalancePiezas.aspx"><span><b>Balance piezas</b></span></a>
+                                </li> -->
+                                <li class="subline"><a href="../Reportes/AdmonPlanta.aspx"><span><b>Administraci&oacute;n
+                                    planta</b></span></a> </li>
+                                <li class="subline"><a href="../Reportes/AdmonPiso.aspx"><span><b>Administraci&oacute;n
+                                    piso</b></span></a> </li>
+                                <li class="subline"><a href="../Reportes/Defectos.aspx"><span><b>Defectos</b></span></a>
+                                </li>
+                                <li class="subline"><a href="../Reportes/KardexProducto.aspx"><span><b>Kardex producto</b></span></a>
+                                </li>
+                                <li class="subline"><a href="../Reportes/ReporteIncentivo.aspx"><span><b>Reporte de Incentivo</b></span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="line"><a target="_blank" href="../Dashboard/Dashboard.aspx">Dashboard</a> </li>
+                        <li class="line">
+                            <asp:LinkButton ID="lbSalir" runat="server" OnClick="LogOut">Salir</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table border="0" style="background: white;" width="1024px" align="center" cellpadding="0"
+        cellspacing="0">
+        <tr>
+            <td align="left" style="width: 1024px;">
+                <asp:ContentPlaceHolder ID="Principal" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    <div id="">
+        <center>
+            <table border="0" cellpadding="0" cellspacing="0" width="1024px">
+                <tr>
+                    <td valign="bottom" style="font-size: 12px; font-family: Arial">
+                        Copyright © Lamosa.com | All rights reserved ! 2010
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    </form>
+</body>
+</html>
